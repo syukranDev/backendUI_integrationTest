@@ -27,11 +27,16 @@
 
 
 
-<!-- Leaflet -->
+<!-- 1st map Leaflet -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
 <script src="leaflet-providers.js"></script>
 <script src="https://unpkg.com/leaflet-ant-path" type="text/javascript"></script>
+
+<!-- 2nd map -->
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"> </script>
+
+
 
 </head>
 
@@ -113,11 +118,11 @@
             <div role="tabpanel" class="d-inline">
               <span >Current lattitude longitude: </span>
               <!-- <span id="update_time"></span> -->
-              <span class="command command-1 type-animate text-white d-none" id="lat"></span> 
-              <span class="command command-1 type-animate text-white d-none" id="lon"></span> 
+              <span class="command command-1 type-animate text-white d-none" id="latNew"></span>° 
+              <span class="command command-1 type-animate text-white d-none" id="lonNew"></span>° 
               <div class="command command-1 d-none"><br>
                 <!-- put your map here -->
-                <div id="mapid" style="width: 100%; height: 360px;"></div>  
+                <div id="map" style="width: 100%; height: 360px;"></div>  
                 <!-- ends here -->
                 
                 <!-- <strong class="text-white">Showing 4 of 4 issues in cli/cli</strong><br><br>
@@ -431,37 +436,79 @@
        
 
   // For getLoc
-    const api_url = 'https://api.wheretheiss.at/v1/satellites/25544';
+    // const api_url = 'https://api.wheretheiss.at/v1/satellites/25544';
 
-    async function getISS() {
-        const response = await fetch(api_url);
-        const data = await response.json();
-        const {latitude, longitude} = data;
+    // async function getISS() {
+    //     const response = await fetch(api_url);
+    //     const data = await response.json();
+    //     const {latitude, longitude} = data;
 
-        document.getElementById('lat').textContent = latitude.toFixed(5);
-        document.getElementById('lon').textContent = longitude.toFixed(5);
+    //     document.getElementById('lat').textContent = latitude.toFixed(5);
+    //     document.getElementById('lon').textContent = longitude.toFixed(5);
 
-        console.log(data.latitude);
-        console.log(data.longitude);
+    //     console.log(data.latitude);
+    //     console.log(data.longitude);
 
-      // console.log(abu);
-      // For Map
-      var mymap = L.map('mapid').setView([data.latitude, data.longitude],2); //15 default
-      // var circle = L.marker([4.383394, 100.966766]).addTo(mymap);
-      // var circle = L.marker([4.386130, 100.966423]).addTo(mymap);
-      // var circle = L.marker([4.387483, 100.965065]).addTo(mymap);
-      var circle = L.marker([data.latitude, data.longitude]).addTo(mymap).bindPopup('You are here!').openPopup();
+    //   // console.log(abu);
+    //   // For Map
+    //   var mymap = L.map('mapid').setView([data.latitude, data.longitude],2); //15 default
+    //   // var circle = L.marker([4.383394, 100.966766]).addTo(mymap);
+    //   // var circle = L.marker([4.386130, 100.966423]).addTo(mymap);
+    //   // var circle = L.marker([4.387483, 100.965065]).addTo(mymap);
+    //   var circle = L.marker([data.latitude, data.longitude]).addTo(mymap).bindPopup('You are here!').openPopup();
       
-        L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
-            maxZoom: 19
-            //attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' -->
-        }).addTo(mymap);
+    //     L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+    //         maxZoom: 19
+    //         //attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' -->
+    //     }).addTo(mymap);
 
-        //get the layer kt sini https://leaflet-extras.github.io/leaflet-providers/preview/
-    };
+    //     //get the layer kt sini https://leaflet-extras.github.io/leaflet-providers/preview/
+    // };
 
-    getISS();
+    // getISS();
+
+    // For getLoc2
+    var map = L.map('map').setView([0,0], 2);
+    function moveISS () {
+        $.getJSON('http://api.open-notify.org/iss-now.json?callback=?', function(data) {
+            var lat = data['iss_position']['latitude'];
+            var lon = data['iss_position']['longitude'];
+
+            iss.setLatLng([lat, lon]);
+            isscirc.setLatLng([lat, lon]);
+            map.panTo([lat, lon], animate=true);
+
+
+            $('#latNew').append(lat);
+            $('#lonNew').append(lon);
+        });
+        setTimeout(moveISS, 5000); 
+    }
+
+    L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+        maxZoom: 4,
+    }).addTo(map);
+
+    var ISSIcon = L.icon({
+        iconUrl: '/media/ISSIcon.png',
+        iconSize: [50, 30],
+        iconAnchor: [25, 15],
+        popupAnchor: [50, 25],
+        shadowUrl: '/media/ISSIcon_shadow.png',
+        shadowSize: [60, 40],
+        shadowAnchor: [30, 15]
+    });
+
    
+    var iss = L.marker([0, 0], {icon: ISSIcon}).addTo(map);
+    var isscirc = L.circle([0,0], 2200e3, {color: "#c22", opacity: 0.3, weight:1, fillColor: "#c22", fillOpacity: 0.1}).addTo(map); 
+    
+    // document.getElementById('lat').textContent = lat.toFixed(5);
+    // document.getElementById('lon').textContent = lon.toFixed(5);
+    
+    moveISS();
+
+    
     
 </script>
 
