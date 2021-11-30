@@ -2,6 +2,7 @@
 <!-- saved from url=(0023)https://cli.github.com/ -->
 <html class="html-fluid"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta http-equiv="content-language" content="en-gb">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -69,7 +70,7 @@
   <div class="container-xl mx-auto px-3 px-md-4 py-4 col-md-10 col-lg-6">
     <div class="d-flex flex-column flex-justify-start flex-items-start">
       <h1 class="h1-mktg-fluid mb-3">Where is the International Space Station?</h1>
-      <p class="f2-mktg-fluid text-gray-light mb-5">Have you ever wonder where is the ISS located right now? Say no more.</p>
+      <p class="f2-mktg-fluid text-gray-light mb-5">Have you ever wonder where is the ISS located right now? Say no more. <span>&#x1F680</span>👨‍🚀</p>
       
      
 
@@ -481,6 +482,29 @@
 
             $('#latNew').append(lat);
             $('#lonNew').append(lon);
+
+            //track last 6 loc
+        //     var latlngs= [[50,9192,-7.0960],[49,9192,-6.0960] , [48,9192,-5.0960]]; 
+        
+        //     var path = L.polyline.antPath(latlngs, {
+        //     "delay": 400,
+        //     "dashArray": [
+        //         14,
+        //         20
+        //     ],
+        //     "weight": 5,
+        //     "color": "#0000FF",
+        //     "pulseColor": "#FFFFFF",
+        //     "paused": false,
+        //     "reverse": false,
+        //     "hardwareAccelerated": true
+        //     }).addTo(map);
+        
+        // map.addLayer(path);
+        // map.fitBounds(path.getBounds()); 
+
+
+
         });
         setTimeout(moveISS, 5000); 
     }
