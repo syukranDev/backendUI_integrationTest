@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)https://cli.github.com/ -->
+<html class="html-fluid"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="content-language" content="en-gb">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" type="text/css" href="./index_files/style.css">
+  <link rel="icon" type="image/x-icon" href="https://github.githubassets.com/favicon.ico">
+  <link href="./index_files/css" rel="stylesheet">
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>GitHub CLI | Take GitHub to the command line</title>
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="GitHub CLI">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Take GitHub to the command line">
+<meta property="og:description" content="Take GitHub to the command line">
+<link rel="canonical" href="https://cli.github.com/">
+<meta property="og:url" content="https://cli.github.com/">
+<meta property="og:site_name" content="GitHub CLI">
+<meta property="og:image" content="https://cli.github.com/assets/images/social-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:image" content="https://cli.github.com/assets/images/social-card.png">
+<meta property="twitter:title" content="GitHub CLI">
+<meta name="twitter:site" content="@github">
+
+
+
+<!-- Leaflet -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+<script src="leaflet-providers.js"></script>
+<script src="https://unpkg.com/leaflet-ant-path" type="text/javascript"></script>
+
+</head>
+
+  <body class="body-fluid font-mktg">
+    <div class="bg-black text-white">
+  <header>
+    <nav class="d-flex flex-content-center flex-justify-between  mx-auto px-3 px-md-6">
+      <a class="d-flex mr-4 text-white flex-items-center f4-mktg-fluid no-underline" href="https://cli.github.com/" aria-label="Homepage">
+        <svg height="32" class="octicon octicon-mark-github mr-2" aria-label="github-logo" viewBox="0 0 16 16" version="1.1" width="32" role="img"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+        syukranDev
+      </a>
+
+      <div class="d-flex flex-auto flex-items-center flex-justify-end">
+        <a href="https://cli.github.com/manual" class="d-inline-block f5-mktg-fluid text-normal text-white py-4 mr-4 no-underline">Manual</a>
+        <a href="https://github.com/cli/cli/releases/latest" class="d-inline-block f5-mktg-fluid text-normal text-white py-4 mr-4 no-underline">Release notes</a>
+      </div>
+    </nav>
+  </header>
+</div>
+
+
+    
+
+
+
+
+
+
+<main class="bg-black text-white">
+  <div class="container-xl mx-auto px-3 px-md-4 py-4 col-md-10 col-lg-6">
+    <div class="d-flex flex-column flex-justify-start flex-items-start">
+      <h1 class="h1-mktg-fluid mb-3">Where is the International Space Station?</h1>
+      <p class="f2-mktg-fluid text-gray-light mb-5">Have you ever wonder where is the ISS located right now? Say no more.</p>
+      
+     
+
+      <a class="mt-3 d-block f5-mktg-fluid text-gray-light Bump-link no-underline" href="https://github.com/cli/cli#installation" target="_blank">See details below <span class="Bump-link-symbol">→</span>
+      </a>
+
+    </div>
+  </div>
+  <div class="position-relative glow py-8">
+    <tab-container>
+      <div class="container-xl mx-auto px-3 px-md-4 mb-6">
+        <!-- Terminal -->
+        <h3 class="command-header text-mono f2 text-normal text-center mb-2">
+          <span class="text-blue-mktg mr-2">$</span>
+          <span class="command command-1 type-animate d-none">ISS Location</span>
+          <!-- <span class="command command-2 type-animate d-none">Data 1</span> -->
+          <!-- <span class="command command-3 type-animate">gh</span>
+          <span class="command command-4 type-animate d-none">gh pr create</span>
+          <span class="command command-5 type-animate d-none">gh pr checks</span>
+          <span class="command command-6 type-animate d-none">gh release create</span>
+          <span class="command command-7 type-animate d-none">gh repo view</span>
+          <span class="command command-8 type-animate d-none">gh alias set</span> -->
+        </h3>
+        <p class="command command-1 f4 text-center mb-4 d-none">See where the ISS at.</p>
+        <!-- <p class="command command-2 f4 text-center mb-4 d-none">Weather</p> -->
+        <!-- <p class="command command-3 f4 text-center mb-4">Check out pull requests locally.</p>
+        <p class="command command-4 d-none f4 text-center mb-4">Create a new pull request.</p>
+        <p class="command command-5 d-none f4 text-center mb-4">View your pull requests’ checks.</p>
+        <p class="command command-6 d-none f4 text-center mb-4">Create a new release.</p>
+        <p class="command command-7 d-none f4 text-center mb-4">View repository READMEs.</p>
+        <p class="command command-8 d-none f4 text-center mb-4">Create a shortcut for a gh command.</p> -->
+
+        <div class="col-12 col-lg-10 mx-auto bg-true-black rounded-2 box-shadow-default-mktg position-relative cli-window overflow-x-auto" style="height: 480px; border: 1px solid rgba(255, 255, 255, 0.1)">
+          <div class="py-2 px-3 text-center">
+            <div class="position-absolute left-3">
+              <div class="d-inline-block circle bg-white mr-1" style="width: 12px; height: 12px; opacity: 0.1"></div>
+              <div class="d-inline-block circle bg-white mr-1" style="width: 12px; height: 12px; opacity: 0.1"></div>
+              <div class="d-inline-block circle bg-white mr-1" style="width: 12px; height: 12px; opacity: 0.1"></div>
+            </div>
+          </div>
+          <div class="f4-mktg-fluid px-5 text-white-fade text-mono mt-5">
+            <span class="text-white mr-1">$</span>
+
+
+            <!-- TERMINAL ONE -->
+            <div role="tabpanel" class="d-inline">
+              <span >Current lattitude longitude: </span>
+              <!-- <span id="update_time"></span> -->
+              <span class="command command-1 type-animate text-white d-none" id="lat"></span> 
+              <span class="command command-1 type-animate text-white d-none" id="lon"></span> 
+              <div class="command command-1 d-none"><br>
+                <!-- put your map here -->
+                <div id="mapid" style="width: 100%; height: 360px;"></div>  
+                <!-- ends here -->
+                
+                <!-- <strong class="text-white">Showing 4 of 4 issues in cli/cli</strong><br><br>
+                <span><span class="d-inline-block green" style="width: 30px">#16</span> <span class="text-white">Improving interactions with protected branches</span></span><br>
+                <span><span class="d-inline-block green" style="width: 30px">#14</span> <span class="text-white">PR commands on a detached head</span></span><br>
+                <span><span class="d-inline-block green" style="width: 30px">#13</span> <span class="text-white">Support for GitHub Enterprise</span> (enhancement)</span><br>
+                <span><span class="d-inline-block green" style="width: 30px">#8</span> <span class="text-white">Add an easier upgrade command</span> (bug)</span> -->
+
+              </div>
+            </div>
+
+            <!-- TERMINAL TWO -->
+                      <div role="tabpanel" class="d-inline">
+            <span class="command command-2 type-animate text-white d-none">gh pr status</span>
+            <div class="command command-2 type-animate-done d-none"><br>
+              <span class="text-white">Relevant pull requests in cli/cli</span><br><br>
+              <strong class="text-white">Current branch</strong><br>
+              <span class="pl-3">There is no pull request associated with <span class="cyan">[fix-homepage-bug]</span></span><br>
+              <br>
+              <strong class="text-white">Created by you</strong><br>
+              <span class="pl-3">You have no open pull requests</span><br>
+              <br>
+              <strong class="text-white">Requesting a code review from you</strong><br>
+              <span class="pl-3"><span class="green">#100</span> <span class="text-white">Fix footer on homepage</span> <span class="cyan">[fix-homepage-footer]</span></span><br>
+              <span class="pl-3"><span class="green">✓ Checks passing</span> <span class="yellow">- Review pending</span>
+            </span></div>
+          </div>
+
+            <!-- TERMINAL 3 -->
+            <div role="tabpanel" class="d-inline">
+              <span class="command command-3 type-animate text-white">gh</span>
+              <div class="command command-3 type-animate-done d-none">
+                <span class="text-white">
+                  remote: Enumerating objects: 66, done.<br>
+                  remote: Counting objects: 100% (66/66), done.<br>
+                  remote: Total 83 (delta 66), reused 66 (delta 66), pack-reused 17<br>
+                  Unpacking objects: 100% (83/83), done.<br>
+                  From https://github.com/owner/repo<br>
+                  * [new ref] refs/pull/8896/head -&gt; patch-2<br>
+                  M README.md<br>
+                  Switched to branch 'patch-2'
+                </span>
+              </div>
+            </div>
+            
+            <!-- TERMINAL FOUR -->
+            <div role="tabpanel" class="d-inline">
+              <span class="command command-4 type-animate text-white d-none">gh pr create</span>
+              <div class="command command-4 type-animate-done d-none"><br>
+                <span class="text-white">Creating pull request for <span class="cyan">feature-branch</span> into <span class="cyan">main</span> in ampinsk/test</span><br><br>
+                <span class="text-white"><strong><span class="green">?</span> Title</strong> My new pull request</span><br>
+                <span class="text-white"><strong><span class="green">?</span> Body</strong><span class="cyan"> [(e) to launch vim, enter to skip]</span></span><br>
+                <span class="text-white"><strong><span class="green">?</span> What's next?</strong><span class="cyan"> Submit</span></span><br>
+                <span class="text-white">http://github.com/owner/repo/pull/1</span>
+              </div>
+            </div>
+
+              <!-- TERMINAL FIVE -->
+            <div role="tabpanel" class="d-inline">
+              <span class="command command-5 type-animate text-white d-none">gh pr checks</span>
+              <div class="command command-5 type-animate-done d-none">
+                <span class="text-white">
+                  <strong>All checks were successful</strong><br>
+                  <span>1 failing, 3 successful, and 1 pending checks</span><br><br>
+                  <span class="yellow">-</span> <span class="text-white d-inline-block" style="width: 232px">CodeQL</span>
+                  <span class="text-white d-inline-block" style="width: 80px">3m43s</span>
+                  <span class="text-white d-inline-block">https://github.com/cli/cli/runs/123</span>
+                  <br>
+                  <span class="green">✓</span> <span class="text-white d-inline-block" style="width: 232px">build (macos-latest)</span>
+                  <span class="text-white d-inline-block" style="width: 80px">4m18s</span>
+                  <span class="text-white d-inline-block">https://github.com/cli/cli/runs/123</span>
+                  <br>
+                  <span class="green">✓</span> <span class="text-white d-inline-block" style="width: 232px">build (ubuntu-latest)</span>
+                  <span class="text-white d-inline-block" style="width: 80px">1m23s</span>
+                  <span class="text-white d-inline-block">https://github.com/cli/cli/runs/123</span>
+                  <br>
+                  <span class="green">✓</span> <span class="text-white d-inline-block" style="width: 232px">build (windows-latest)</span>
+                  <span class="text-white d-inline-block" style="width: 80px">4m43s</span>
+                  <span class="text-white d-inline-block">https://github.com/cli/cli/runs/123</span>
+                  <br>
+                  <span class="red">×</span> <span class="text-white d-inline-block" style="width: 232px">lint</span>
+                  <span class="text-white d-inline-block" style="width: 80px">47s</span>
+                  <span class="text-white d-inline-block">https://github.com/cli/cli/runs/123</span>
+                  <br>
+                </span>
+              </div>
+            </div>
+
+            <!-- TERMINAL SIX -->
+            <div role="tabpanel" class="d-inline">
+              <span class="command command-6 type-animate text-white d-none">gh release create 1.0</span>
+              <div class="command command-6 type-animate-done d-none">
+                <span class="text-white">
+                  <strong><span class="green">?</span> Title</strong><span class="cyan"> GitHub CLI 1.0</span><br>
+                  <strong><span class="green">?</span> Release notes</strong><span class="cyan"> Write my own</span><br>
+                  <strong><span class="green">?</span> Is this a prerelease?</strong><span class="cyan"> No</span><br>
+                  <strong><span class="green">?</span> Submit?</strong><span class="cyan"> Publish release</span><br>
+                  https://github.com/octocat/.github/releases/tag/1.0
+                </span>
+              </div>
+            </div>
+
+            <!-- TERMINAL SEVEN -->
+            <div role="tabpanel" class="d-inline">
+              <span class="command command-7 type-animate text-white d-none">gh repo view</span>
+              <div class="command command-7 type-animate-done d-none">
+                <span class="text-white">
+                  <strong>cli/cli</strong><br>
+                  <span>GitHub’s official command line tool</span><br><br>
+                  <strong class="ml-3 px-2 py-1 yellow bg-purple">GitHub CLI</strong><br><br>
+                  <span class="pl-3 d-inline-block"><span class="red px-2 py-1 bg-gray-dark">gh</span> is GitHub on the command line. It brings pull requests, issues, and other GitHub concepts to the terminal next to where you are already working with <span class="red px-2 py-1 bg-gray-dark">git</span> and your code.</span><br><br>
+                  <span class="pl-3 d-inline-block"><span class="gray">Image: screenshot of gh pr status →</span> <span class="magenta">https://user-images.githubusercontent.com/98482/84171218-327e7a80-aa40-11ea-8cd1-5177fc2d0e72.png</span></span><br><br>
+                  <span class="gray">View this repository on GitHub: https://github.com/cli/cli</span>
+                </span>
+              </div>
+            </div>
+
+              <!-- TERMINAL EIGHT -->
+            <div role="tabpanel" class="d-inline">
+              <span class="command command-8 type-animate text-white d-none">gh alias set bugs 'issue list --label="bugs"'</span>
+              <div class="command command-8 type-animate-done d-none">
+                <span class="text-white">
+                  - Adding alias for bugs: issue list --label="bugs"<br>
+                  <span class="green">✓</span> Added alias.<br>
+                  <br>
+                  <span>$ gh bugs</span><br>
+                  <br>
+                  <strong class="text-white">Showing 2 of 7 issues in cli/cli that match your search</strong><br><br>
+                  <span><span class="d-inline-block green" style="width: 30px">#19</span> <span class="text-white">Pagination request returns empty JSON</span><span class="text-gray-light">   (bug)</span></span><br>
+                  <span><span class="d-inline-block green" style="width: 30px">#21</span> <span class="text-white">Error raised when passing valid parameters</span><span class="text-gray-light">   (bug)</span></span><br>
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+        <!-- =====================2nd window============================ -->
+
+        <div class="my-6 col-12 col-lg-10 mx-auto bg-true-black rounded-2 box-shadow-default-mktg position-relative cli-window overflow-x-auto" style="height: 480px; border: 1px solid rgba(255, 255, 255, 0.1)">
+          <div class="py-2 px-3 text-center">
+            <div class="position-absolute left-3">
+              <div class="d-inline-block circle bg-white mr-1" style="width: 12px; height: 12px; opacity: 0.1"></div>
+              <div class="d-inline-block circle bg-white mr-1" style="width: 12px; height: 12px; opacity: 0.1"></div>
+              <div class="d-inline-block circle bg-white mr-1" style="width: 12px; height: 12px; opacity: 0.1"></div>
+            </div>
+          </div>
+          <div class="f4-mktg-fluid px-5 text-white-fade text-mono mt-5">
+            <span class="text-white mr-1">$</span>
+              <!-- content goes here -->
+          </div>
+        </div>
+
+       <!-- ============================================================ -->
+
+
+        <!-- /Terminal -->
+      </div>
+
+      <div role="tablist" class="my-6 px-1 mx-auto">
+        <button class="btn-mktg-fluid btn-white-outline-mktg-fluid text-mono m-1" type="button" role="tab" data-tab="1" tabindex="-1" aria-selected="false">ISS Location</button>
+        <button class="btn-mktg-fluid btn-white-outline-mktg-fluid text-mono m-1" type="button" role="tab" data-tab="2" tabindex="-1" aria-selected="false">Data 1</button>
+        <!-- <button class="btn-mktg-fluid btn-white-outline-mktg-fluid text-mono m-1" type="button" role="tab" data-tab="3" tabindex="-1" aria-selected="false">gh pr checkout</button>
+        <button class="btn-mktg-fluid btn-white-outline-mktg-fluid text-mono m-1" type="button" role="tab" data-tab="4" tabindex="-1" aria-selected="false">gh pr create</button>
+        <button class="btn-mktg-fluid btn-white-outline-mktg-fluid text-mono m-1" type="button" role="tab" data-tab="5" tabindex="-1" aria-selected="false">gh pr checks</button>
+        <button class="btn-mktg-fluid btn-white-outline-mktg-fluid text-mono m-1" type="button" role="tab" data-tab="6" tabindex="-1" aria-selected="false">gh release create</button>
+        <button class="btn-mktg-fluid btn-white-outline-mktg-fluid text-mono m-1" type="button" role="tab" data-tab="7" tabindex="-1" aria-selected="false">gh repo view</button>
+        <button class="btn-mktg-fluid btn-white-outline-mktg-fluid text-mono m-1" type="button" role="tab" data-tab="8" tabindex="-1" aria-selected="false">gh alias set</button> -->
+      </div>
+    </tab-container>
+
+    <div class="width-full">
+      <div class="d-flex flex-justify-center mb-12 px-3">
+        <a class="h5-mktg-fluid text-white Bump-link mx-auto mx-lg-0 no-underline mb-5" href="https://cli.github.com/manual/gh">View all GitHub CLI commands <span class="Bump-link-symbol">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-white text-gray-dark position-relative">
+    <div class="mask"></div>
+
+    <div class="container-xl mx-auto px-3 px-md-4 pt-8 pb-4">
+      <div class="d-flex flex-column gutter-spacious">
+        <h2 class="col-12 col-md-8 h2-mktg-fluid mb-6 mb-md-7" style="z-index: 1">Goodbye, context switching. Hello, terminal.</h2>
+
+        <!-- <div class="col-12 d-flex flex-wrap gutter-spacious">
+          <div class="col-12 col-md-3 mb-6 d-flex flex-column flex-items-start">
+            <h3 class="h5-mktg-fluid mb-1">Your entire GitHub workflow</h3>
+            <p class="text-gray-light f5-mktg-fluid">Work with issues, pull requests, checks, releases and more.</p>
+            <a class="f6-mktg-fluid link-purple-mktg Bump-link no-underline" href="https://cli.github.com/manual/gh">View all GitHub CLI commands <span class="Bump-link-symbol">→</span></a>
+          </div>
+
+          <div class="col-12 col-md-3 mb-6 d-flex flex-column flex-items-start">
+            <h3 class="h5-mktg-fluid mb-1">Script and customize</h3>
+            <p class="text-gray-light f5-mktg-fluid">Call the GitHub API to script almost any action, and set a custom alias for any command.</p>
+            <a class="f6-mktg-fluid link-purple-mktg Bump-link no-underline" href="https://cli.github.com/manual">Learn about aliases and API <span class="Bump-link-symbol">→</span></a>
+          </div>
+
+          <div class="col-12 col-md-3 mb-6 d-flex flex-column flex-items-start">
+            <h3 class="h5-mktg-fluid mb-1">Enterprise-ready</h3>
+            <p class="text-gray-light f5-mktg-fluid">Connect to GitHub Enterprise Server in addition to GitHub.com.</p>
+            <a class="f6-mktg-fluid link-purple-mktg Bump-link no-underline" href="https://cli.github.com/manual#github-enterprise">Get set up with Enterprise <span class="Bump-link-symbol">→</span></a>
+
+          </div>
+
+          <div class="col-12 col-md-3 mb-6 d-flex flex-column flex-items-start">
+            <h3 class="h5-mktg-fluid mb-1">We &lt;3 community</h3>
+            <p class="text-gray-light f5-mktg-fluid">GitHub CLI is open source and ready for your contributions.</p>
+            <a class="f6-mktg-fluid link-purple-mktg Bump-link no-underline" href="https://github.com/cli/cli">Contribute to CLI <span class="Bump-link-symbol">→</span></a>
+          </div>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="position-relative">
+      <div class="container-xl mx-auto px-3 px-md-4 pt-6 pb-8">
+      <div class="col-12 col-lg-6 mb-6 mt-md-3 mx-auto box-shadow-default-mktg">
+        <div class="p-5 p-md-7 bg-white position-relative" style="z-index: 1">
+          <h2 class="h3-mktg-fluid mb-2">Try GitHub on the command&nbsp;line</h2>
+          <p class="text-gray-light f4-mktg-fluid mb-3">GitHub CLI brings GitHub to your terminal. Free and open source.</p>
+
+          <!-- if mac -->
+          <div class="download-mac d-none f5-mktg-fluid">
+            <div class="d-inline-block width-full width-sm-auto">
+              <code class="mb-2 p-3 rounded-2 user-select-contain d-block d-sm-inline" style="background-color: #F1F8FF;">
+                brew install gh
+              </code>
+              <span class="text-gray mx-sm-2 mb-2 d-inline-block">or</span>
+            </div>
+            <a class="btn-mktg-fluid p-3 width-full width-sm-auto" href="https://github.com/cli/cli/releases/download/v2.2.0/gh_2.2.0_macOS_amd64.tar.gz">Download for Mac</a>
+          </div>
+
+            <!-- if windows -->
+            <div class="download-windows">
+              <a class="btn-mktg-fluid" href="https://github.com/cli/cli/releases/download/v2.2.0/gh_2.2.0_windows_amd64.msi">Download for Windows</a>
+            </div>
+
+            <!-- if linux -->
+            <div class="download-linux d-none">
+              <a class="btn-mktg-fluid" target="_blank" href="https://github.com/cli/cli/blob/trunk/docs/install_linux.md">Install for Linux</a>
+            </div>
+
+          <a class="mt-4 d-block f5-mktg-fluid text-blue-mktg Bump-link mx-auto mx-lg-0 no-underline" href="https://github.com/cli/cli#installation" target="_blank">View installation instructions <span class="Bump-link-symbol">→</span>
+          </a>
+
+            <div class="mt-4 d-none">
+              <img alt="Windows" class="mr-4" style="width: 24px;" src="./index_files/icon-windows.svg">
+              <img alt="Mac" class="mr-4" style="width: 24px;" src="./index_files/icon-mac.svg">
+              <img alt="Linux" style="width: 24px;" src="./index_files/icon-linux.svg">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="position-absolute width-full height-full overflow-hidden bottom-0">
+        <img src="./index_files/square-pattern.png" alt="" class="bottom-0 position-absolute" height="450" width="1680">
+      </div>
+    </div>
+  </div>
+</main>
+
+
+
+  <!-- =====================================FOTERRRRR================================================================ -->
+  <div class="bg-gray-light">
+    <div class="container-xl px-3 px-md-4 f6 py-4 d-sm-flex flex-justify-between flex-row-reverse flex-items-center">
+      <ul class="list-style-none d-flex flex-items-center mb-3 mb-sm-0 lh-condensed-ultra">
+        <li class="mr-3">
+          <a href="https://twitter.com/github" title="GitHub on Twitter" style="color: #959da5;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 273.5 222.3" class="d-block" height="18"><path d="M273.5 26.3a109.77 109.77 0 0 1-32.2 8.8 56.07 56.07 0 0 0 24.7-31 113.39 113.39 0 0 1-35.7 13.6 56.1 56.1 0 0 0-97 38.4 54 54 0 0 0 1.5 12.8A159.68 159.68 0 0 1 19.1 10.3a56.12 56.12 0 0 0 17.4 74.9 56.06 56.06 0 0 1-25.4-7v.7a56.11 56.11 0 0 0 45 55 55.65 55.65 0 0 1-14.8 2 62.39 62.39 0 0 1-10.6-1 56.24 56.24 0 0 0 52.4 39 112.87 112.87 0 0 1-69.7 24 119 119 0 0 1-13.4-.8 158.83 158.83 0 0 0 86 25.2c103.2 0 159.6-85.5 159.6-159.6 0-2.4-.1-4.9-.2-7.3a114.25 114.25 0 0 0 28.1-29.1" fill="currentColor"></path></svg>
+          </a>
+        </li>
+        <li class="mr-3">
+          <a href="https://www.facebook.com/GitHub" title="GitHub on Facebook" style="color: #959da5;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.3 15.4" class="d-block" height="18"><path d="M14.5 0H.8a.88.88 0 0 0-.8.9v13.6a.88.88 0 0 0 .8.9h7.3v-6h-2V7.1h2V5.4a2.87 2.87 0 0 1 2.5-3.1h.5a10.87 10.87 0 0 1 1.8.1v2.1h-1.3c-1 0-1.1.5-1.1 1.1v1.5h2.3l-.3 2.3h-2v5.9h3.9a.88.88 0 0 0 .9-.8V.8a.86.86 0 0 0-.8-.8z" fill="currentColor"></path></svg>
+          </a>
+        </li>
+        <li class="mr-3">
+          <a href="https://www.youtube.com/github" title="GitHub on YouTube" style="color: #959da5;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.17 13.6" class="d-block" height="16"><path d="M18.77 2.13A2.4 2.4 0 0 0 17.09.42C15.59 0 9.58 0 9.58 0a57.55 57.55 0 0 0-7.5.4A2.49 2.49 0 0 0 .39 2.13 26.27 26.27 0 0 0 0 6.8a26.15 26.15 0 0 0 .39 4.67 2.43 2.43 0 0 0 1.69 1.71c1.52.42 7.5.42 7.5.42a57.69 57.69 0 0 0 7.51-.4 2.4 2.4 0 0 0 1.68-1.71 25.63 25.63 0 0 0 .4-4.67 24 24 0 0 0-.4-4.69zM7.67 9.71V3.89l5 2.91z" fill="currentColor"></path></svg>
+          </a>
+        </li>
+        <li class="mr-3 flex-self-start">
+          <a href="https://www.linkedin.com/company/github" title="GitHub on Linkedin" style="color: #959da5;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 18" class="d-block" height="18"><path d="M3.94 2A2 2 0 1 1 2 0a2 2 0 0 1 1.94 2zM4 5.48H0V18h4zm6.32 0H6.34V18h3.94v-6.57c0-3.66 4.77-4 4.77 0V18H19v-7.93c0-6.17-7.06-5.94-8.72-2.91z" fill="currentColor"></path></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/github" title="GitHub&#39;s organization" style="color: #959da5;">
+            <svg height="20" fill="#959da5" class="octicon octicon-mark-github d-block" alt="GitHub" viewBox="0 0 16 16" version="1.1" width="20" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+          </a>
+        </li>
+      </ul>
+      <ul class="list-style-none d-flex text-gray">
+        <li class="mr-3">© 2021 GitHub, Inc.</li>
+        <li class="mr-3"><a href="https://help.github.com/en/articles/github-terms-of-service/" class="link-gray">Terms </a></li>
+        <li><a href="https://help.github.com/en/articles/github-privacy-statement/" class="link-gray">Privacy</a></li>
+      </ul>
+    </div>
+  </div>
+</div> 
+
+<script src="./index_files/dist.js.download"></script>
+
+<script>
+        
+
+       
+
+  // For getLoc
+    const api_url = 'https://api.wheretheiss.at/v1/satellites/25544';
+
+    async function getISS() {
+        const response = await fetch(api_url);
+        const data = await response.json();
+        const {latitude, longitude} = data;
+
+        document.getElementById('lat').textContent = latitude.toFixed(5);
+        document.getElementById('lon').textContent = longitude.toFixed(5);
+
+        console.log(data.latitude);
+        console.log(data.longitude);
+
+      // console.log(abu);
+      // For Map
+      var mymap = L.map('mapid').setView([data.latitude, data.longitude],2); //15 default
+      // var circle = L.marker([4.383394, 100.966766]).addTo(mymap);
+      // var circle = L.marker([4.386130, 100.966423]).addTo(mymap);
+      // var circle = L.marker([4.387483, 100.965065]).addTo(mymap);
+      var circle = L.marker([data.latitude, data.longitude]).addTo(mymap).bindPopup('You are here!').openPopup();
+      
+        L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+            maxZoom: 19
+            //attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' -->
+        }).addTo(mymap);
+
+        //get the layer kt sini https://leaflet-extras.github.io/leaflet-providers/preview/
+    };
+
+    getISS();
+   
+    
+</script>
+
+  
+
+</body></html>
