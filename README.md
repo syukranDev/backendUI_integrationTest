@@ -1,7 +1,7 @@
 # iv2021-assessment
 
 **Front-end** = Js, HTML, CSS, Bootstrap, chartJS, leafletJs <br /> 
-**Back end** = nodeJS (fakeAPI) <br /> 
+**Back end/API** = nodeJS (fakeAPI) & `https://api.wheretheiss.at/` <br /> 
 
 
 # To install
@@ -23,4 +23,7 @@
 <!-- update this later, check again -->
 
 
+# Remarks & Future Dev
+-`db.json` of fakeAPI only contain 11 sets of self-generate data (lattitude,longitude,temperature,country,id,timestamp) due to simplicity and not many opensource api provides all these in one shot.  <br />
+-not really meet the objective due to time constraint, but i think meet the Extension A,B,C
 
