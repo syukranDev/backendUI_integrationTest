@@ -24,5 +24,5 @@
 
 # Remarks & Future Dev
 -`db.json` of fakeAPI only contain 11 sets of self-generate data (lattitude,longitude,temperature,country,id,timestamp) due to simplicity and not many opensource api provides all these in one shot.  <br />
--not really meet the objective due to time constraint, but i think meet the Extension A,B,C.
+-not really meet the main task objective due to time constraint, but i think meet the Extension A,B,C.
 
