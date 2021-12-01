@@ -37,6 +37,9 @@
 <!-- 2nd map -->
 <script src="http://code.jquery.com/jquery-2.0.3.min.js"> </script>
 
+<!-- where is the iss -->
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"> </script>
+
 
 
 </head>
@@ -70,7 +73,7 @@
   <div class="container-xl mx-auto px-3 px-md-4 py-4 col-md-10 col-lg-6">
     <div class="d-flex flex-column flex-justify-start flex-items-start">
       <h1 class="h1-mktg-fluid mb-3">Where is the International Space Station?</h1>
-      <p class="f2-mktg-fluid text-gray-light mb-5">Have you ever wonder where is the ISS located right now? Say no more. <span>&#x1F680</span>👨‍🚀</p>
+      <p class="f2-mktg-fluid text-gray-light mb-5">Have you ever wonder where is the ISS located right now? Now you know. <span>&#x1F680</span>👨‍🚀</p>
       
      
 
@@ -94,7 +97,7 @@
           <span class="command command-7 type-animate d-none">gh repo view</span>
           <span class="command command-8 type-animate d-none">gh alias set</span> -->
         </h3>
-        <p class="command command-1 f4 text-center mb-4 d-none">See where the ISS at as of (put time here)</p>
+        <!-- <p class="command command-1 f4 text-center mb-4 d-none">See where the ISS at as of (put time here)</p> -->
         <!-- <p class="command command-2 f4 text-center mb-4 d-none">Weather</p> -->
         <!-- <p class="command command-3 f4 text-center mb-4">Check out pull requests locally.</p>
         <p class="command command-4 d-none f4 text-center mb-4">Create a new pull request.</p>
@@ -119,8 +122,8 @@
             <div role="tabpanel" class="d-inline">
               <span >Current lattitude longitude: </span>
               <!-- <span id="update_time"></span> -->
-              <span class="command command-1 type-animate text-white d-none" id="latNew"></span>° N
-              <span class="command command-1 type-animate text-white d-none" id="lonNew"></span>° E
+              <span class="command command-1  text-white d-none" id="latNew"></span>° N
+              <span class="command command-1  text-white d-none" id="lonNew"></span>° E
               <div class="command command-1 d-none"><br>
                 <!-- put your map here -->
                 <div id="map" style="width: 100%; height: 360px;"></div>  
@@ -136,7 +139,7 @@
             </div>
 
             <!-- TERMINAL TWO -->
-                      <div role="tabpanel" class="d-inline">
+          <div role="tabpanel" class="d-inline">
             <span class="command command-2 type-animate text-white d-none">gh pr status</span>
             <div class="command command-2 type-animate-done d-none"><br>
               <span class="text-white">Relevant pull requests in cli/cli</span><br><br>
@@ -170,93 +173,19 @@
             </div>
             
             <!-- TERMINAL FOUR -->
-            <div role="tabpanel" class="d-inline">
-              <span class="command command-4 type-animate text-white d-none">gh pr create</span>
-              <div class="command command-4 type-animate-done d-none"><br>
-                <span class="text-white">Creating pull request for <span class="cyan">feature-branch</span> into <span class="cyan">main</span> in ampinsk/test</span><br><br>
-                <span class="text-white"><strong><span class="green">?</span> Title</strong> My new pull request</span><br>
-                <span class="text-white"><strong><span class="green">?</span> Body</strong><span class="cyan"> [(e) to launch vim, enter to skip]</span></span><br>
-                <span class="text-white"><strong><span class="green">?</span> What's next?</strong><span class="cyan"> Submit</span></span><br>
-                <span class="text-white">http://github.com/owner/repo/pull/1</span>
-              </div>
-            </div>
+            
 
               <!-- TERMINAL FIVE -->
-            <div role="tabpanel" class="d-inline">
-              <span class="command command-5 type-animate text-white d-none">gh pr checks</span>
-              <div class="command command-5 type-animate-done d-none">
-                <span class="text-white">
-                  <strong>All checks were successful</strong><br>
-                  <span>1 failing, 3 successful, and 1 pending checks</span><br><br>
-                  <span class="yellow">-</span> <span class="text-white d-inline-block" style="width: 232px">CodeQL</span>
-                  <span class="text-white d-inline-block" style="width: 80px">3m43s</span>
-                  <span class="text-white d-inline-block">https://github.com/cli/cli/runs/123</span>
-                  <br>
-                  <span class="green">✓</span> <span class="text-white d-inline-block" style="width: 232px">build (macos-latest)</span>
-                  <span class="text-white d-inline-block" style="width: 80px">4m18s</span>
-                  <span class="text-white d-inline-block">https://github.com/cli/cli/runs/123</span>
-                  <br>
-                  <span class="green">✓</span> <span class="text-white d-inline-block" style="width: 232px">build (ubuntu-latest)</span>
-                  <span class="text-white d-inline-block" style="width: 80px">1m23s</span>
-                  <span class="text-white d-inline-block">https://github.com/cli/cli/runs/123</span>
-                  <br>
-                  <span class="green">✓</span> <span class="text-white d-inline-block" style="width: 232px">build (windows-latest)</span>
-                  <span class="text-white d-inline-block" style="width: 80px">4m43s</span>
-                  <span class="text-white d-inline-block">https://github.com/cli/cli/runs/123</span>
-                  <br>
-                  <span class="red">×</span> <span class="text-white d-inline-block" style="width: 232px">lint</span>
-                  <span class="text-white d-inline-block" style="width: 80px">47s</span>
-                  <span class="text-white d-inline-block">https://github.com/cli/cli/runs/123</span>
-                  <br>
-                </span>
-              </div>
-            </div>
+            
 
             <!-- TERMINAL SIX -->
-            <div role="tabpanel" class="d-inline">
-              <span class="command command-6 type-animate text-white d-none">gh release create 1.0</span>
-              <div class="command command-6 type-animate-done d-none">
-                <span class="text-white">
-                  <strong><span class="green">?</span> Title</strong><span class="cyan"> GitHub CLI 1.0</span><br>
-                  <strong><span class="green">?</span> Release notes</strong><span class="cyan"> Write my own</span><br>
-                  <strong><span class="green">?</span> Is this a prerelease?</strong><span class="cyan"> No</span><br>
-                  <strong><span class="green">?</span> Submit?</strong><span class="cyan"> Publish release</span><br>
-                  https://github.com/octocat/.github/releases/tag/1.0
-                </span>
-              </div>
-            </div>
+            
 
             <!-- TERMINAL SEVEN -->
-            <div role="tabpanel" class="d-inline">
-              <span class="command command-7 type-animate text-white d-none">gh repo view</span>
-              <div class="command command-7 type-animate-done d-none">
-                <span class="text-white">
-                  <strong>cli/cli</strong><br>
-                  <span>GitHub’s official command line tool</span><br><br>
-                  <strong class="ml-3 px-2 py-1 yellow bg-purple">GitHub CLI</strong><br><br>
-                  <span class="pl-3 d-inline-block"><span class="red px-2 py-1 bg-gray-dark">gh</span> is GitHub on the command line. It brings pull requests, issues, and other GitHub concepts to the terminal next to where you are already working with <span class="red px-2 py-1 bg-gray-dark">git</span> and your code.</span><br><br>
-                  <span class="pl-3 d-inline-block"><span class="gray">Image: screenshot of gh pr status →</span> <span class="magenta">https://user-images.githubusercontent.com/98482/84171218-327e7a80-aa40-11ea-8cd1-5177fc2d0e72.png</span></span><br><br>
-                  <span class="gray">View this repository on GitHub: https://github.com/cli/cli</span>
-                </span>
-              </div>
-            </div>
+            
 
               <!-- TERMINAL EIGHT -->
-            <div role="tabpanel" class="d-inline">
-              <span class="command command-8 type-animate text-white d-none">gh alias set bugs 'issue list --label="bugs"'</span>
-              <div class="command command-8 type-animate-done d-none">
-                <span class="text-white">
-                  - Adding alias for bugs: issue list --label="bugs"<br>
-                  <span class="green">✓</span> Added alias.<br>
-                  <br>
-                  <span>$ gh bugs</span><br>
-                  <br>
-                  <strong class="text-white">Showing 2 of 7 issues in cli/cli that match your search</strong><br><br>
-                  <span><span class="d-inline-block green" style="width: 30px">#19</span> <span class="text-white">Pagination request returns empty JSON</span><span class="text-gray-light">   (bug)</span></span><br>
-                  <span><span class="d-inline-block green" style="width: 30px">#21</span> <span class="text-white">Error raised when passing valid parameters</span><span class="text-gray-light">   (bug)</span></span><br>
-                </span>
-              </div>
-            </div>
+            
 
           </div>
         </div>
@@ -277,6 +206,23 @@
           <div class="f4-mktg-fluid px-5 text-white-fade text-mono mt-5">
             <span class="text-white mr-1">$</span>
               <!-- content goes here -->
+              <div role="tabpanel" class="d-inline">
+                <span >Current lattitude longitude: </span>
+                <!-- <span id="update_time"></span> -->
+                <span class="command command-1  text-white d-none" id="latNew"></span>° N
+                <span class="command command-1  text-white d-none" id="lonNew"></span>° E
+                <div class="command command-1 d-none"><br>
+                
+                  
+                  <strong class="text-white">Showing 4 of 4 issues in cli/cli</strong><br><br>
+                  <span><span class="d-inline-block green" style="width: 30px">#16</span> <span class="text-white">Improving interactions with protected branches</span></span><br>
+                  <span><span class="d-inline-block green" style="width: 30px">#14</span> <span class="text-white">PR commands on a detached head</span></span><br>
+                  <span><span class="d-inline-block green" style="width: 30px">#13</span> <span class="text-white">Support for GitHub Enterprise</span> (enhancement)</span><br>
+                  <span><span class="d-inline-block green" style="width: 30px">#8</span> <span class="text-white">Add an easier upgrade command</span> (bug)</span> 
+  
+                </div>
+              </div>
+              <!-- end -->
           </div>
         </div>
 
@@ -442,97 +388,60 @@
 <script src="./index_files/dist.js.download"></script>
 
 <script>
-        
+  
 
-       
-
-  // For getLoc
-    // const api_url = 'https://api.wheretheiss.at/v1/satellites/25544';
-
-    // async function getISS() {
-    //     const response = await fetch(api_url);
-    //     const data = await response.json();
-    //     const {latitude, longitude} = data;
-
-    //     document.getElementById('lat').textContent = latitude.toFixed(5);
-    //     document.getElementById('lon').textContent = longitude.toFixed(5);
-
-    //     console.log(data.latitude);
-    //     console.log(data.longitude);
-
-    //   // console.log(abu);
-    //   // For Map
-    //   var mymap = L.map('mapid').setView([data.latitude, data.longitude],2); //15 default
-    //   // var circle = L.marker([4.383394, 100.966766]).addTo(mymap);
-    //   // var circle = L.marker([4.386130, 100.966423]).addTo(mymap);
-    //   // var circle = L.marker([4.387483, 100.965065]).addTo(mymap);
-    //   var circle = L.marker([data.latitude, data.longitude]).addTo(mymap).bindPopup('You are here!').openPopup();
-      
-    //     L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
-    //         maxZoom: 19
-    //         //attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' -->
-    //     }).addTo(mymap);
-
-    //     //get the layer kt sini https://leaflet-extras.github.io/leaflet-providers/preview/
-    // };
-
-    // getISS();
-
-    // For getLoc2
+    //============================================================== For getLoc2=
     var map = L.map('map').setView([0,0], 2);
-    function moveISS () {
-        
-        $.getJSON('http://api.open-notify.org/iss-now.json?callback=?', function(data) {
-            var lat = data['iss_position']['latitude'];
-            var lon = data['iss_position']['longitude'];
+    var traceCoordinate = [];
+    var newDate = new Date().getTime()/1000;
+    var newDate_30MIN = newDate - 1800;
+    var newDate_1H = newDate - 3600;
+    var newDate_1H30MIN = newDate - 5400;
+    var newDate_2H = newDate - 7200;
 
-            var newData = [];
-            newData.push(lat,lon);
-            console.log(newData);
+    var api_url = 'https://api.wheretheiss.at/v1/satellites/25544/positions?timestamps=' + newDate + ',' + newDate_30MIN + ',' + newDate_1H + ',' + newDate_1H30MIN + ',' + newDate_2H;
+
+    console.log(api_url);
+    
+    
+    function moveISS () {
+        $.getJSON(api_url, function(data) {
+            
+            //for JSON v1 use this http://api.open-notify.org/iss-now.json
+            // var lat = data['iss_position']['latitude'];
+            // var lon = data['iss_position']['longitude'];
+            
+            //for JSON v2 use this https://api.wheretheiss.at/v1/satellites/25544
+            const {latitude, longitude} = data;
+            var lat = data[0].latitude;
+            var lon = data[0].longitude;
+            
+            
+            for(var i in data) {
+              traceCoordinate.push([data[i].latitude, data[i].longitude]);
+            }
+
+            //newData.push([lat,lon]); to push new data into array
+            console.log(traceCoordinate);
 
             iss.setLatLng([lat, lon]);
             isscirc.setLatLng([lat, lon]);
             map.panTo([lat, lon], animate=true);
 
 
-            // $('#latNew').append(lat);
-            // $('#lonNew').append(lon);
+    
             $('#latNew').html(Math.round(lat*1000)/1000.0);
             $('#lonNew').html(Math.round(lon*1000)/1000.0);
             
             
-            
-            
-
-            //track last 6 loc
-        //     var latlngs= [[50,9192,-7.0960],[49,9192,-6.0960] , [48,9192,-5.0960]]; 
-        
-        //     var path = L.polyline.antPath(latlngs, {
-        //     "delay": 400,
-        //     "dashArray": [
-        //         14,
-        //         20
-        //     ],
-        //     "weight": 5,
-        //     "color": "#0000FF",
-        //     "pulseColor": "#FFFFFF",
-        //     "paused": false,
-        //     "reverse": false,
-        //     "hardwareAccelerated": true
-        //     }).addTo(map);
-        
-        // map.addLayer(path);
-        // map.fitBounds(path.getBounds()); 
-
-
-
+      
         });
         
         setTimeout(moveISS, 5000); 
     }
 
     L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
-        maxZoom: 4,
+        maxZoom: 15, //default 4
     }).addTo(map);
 
     var ISSIcon = L.icon({
@@ -545,17 +454,26 @@
         shadowAnchor: [30, 15]
     });
 
-   
-    var iss = L.marker([0, 0], {icon: ISSIcon}).addTo(map);
-    var isscirc = L.circle([0,0], 2200e3, {color: "#c22", opacity: 0.3, weight:1, fillColor: "#c22", fillOpacity: 0.1}).addTo(map); 
     
-    // document.getElementById('lat').textContent = lat.toFixed(5);
-    // document.getElementById('lon').textContent = lon.toFixed(5);
+    var iss = L.marker([0, 0], {icon: ISSIcon}).addTo(map);
+    var isscirc = L.circle([0,0], 2200e3, {color: "#c22", opacity: 0.3, weight:1, fillColor: "#c22", fillOpacity: 0.1}).addTo(map).bindPopup('ISS is here!').openPopup(); 
+
+    //traceroute
+    var polyline = L.polyline(traceCoordinate).addTo(map);
     
     moveISS();
 
+
+    var newDate = new Date().getTime()/1000;
+    var newDate_1H = newDate - 3600;
+    var newDate_2H = newDate - 7200;
+
+    // console.log(newDate);
+    // console.log(newDate_1H);
+    // console.log(newDate_2H);
+
     
-    
+  
 </script>
 
   
