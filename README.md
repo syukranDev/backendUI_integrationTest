@@ -1,11 +1,10 @@
 # iv2021-assessment
-
-**Front-end** = Js, HTML, CSS, Bootstrap, chartJS, leafletJs <br /> 
+**Language** =HTML, CSS, Javascript, jQuery AJAX <br />
+**Front-end** = Bootstrap, chartJS, leafletJs <br /> 
 **Back end/API** = nodeJS (fakeAPI) & `https://api.wheretheiss.at/` <br /> 
 
 
 # To install
-
 **For front-end:** <br /> 
 [1] Go to your local server directory (httpdocs dir for XAMPP) <br /> 
 [2] Open terminal/git bash and type `git clone https://github.com/syukranDev/iv2021_syukran.git` <br /> 
@@ -25,5 +24,5 @@
 
 # Remarks & Future Dev
 -`db.json` of fakeAPI only contain 11 sets of self-generate data (lattitude,longitude,temperature,country,id,timestamp) due to simplicity and not many opensource api provides all these in one shot.  <br />
--not really meet the objective due to time constraint, but i think meet the Extension A,B,C
+-not really meet the objective due to time constraint, but i think meet the Extension A,B,C.
 
