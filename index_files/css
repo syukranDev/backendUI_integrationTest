@@ -233,3 +233,5 @@
   border: none !important;
   box-shadow: none !important;
 }
+
+/* To hide DIV tags */

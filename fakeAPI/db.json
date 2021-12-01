@@ -6,7 +6,7 @@
         "longitude": 140.609372,
         "temperature": -270.45,
         "timestamp": 1638335471,
-        "location" : "Malaysia"
+        "location" : "Philippine Sea"
       },
       {
         "id": 2,
@@ -14,7 +14,7 @@
         "longitude": 128.762982,
         "temperature": -140.45,
         "timestamp": 1638333671,
-        "location" : "Malaysia"
+        "location" : "Australia"
       },
       {
         "id": 3,
@@ -22,7 +22,7 @@
         "longitude": 99.936767,
         "temperature": -111.45,
         "timestamp": 1638331871,
-        "location" : "Malaysia"
+        "location" : "Indian Ocean"
       }
       ,
       {
@@ -31,7 +31,7 @@
         "longitude": 90.572724,
         "temperature": -200.45,
         "timestamp": 1638330071,
-        "location" : "Malaysia"
+        "location" : "Sri Lanka"
       }
       ,
       {
