@@ -1,0 +1,67 @@
+var map = L.map('map').setView([0,0], 2);
+    //var traceCoordinate = [];
+    var newDate = new Date().getTime()/1000;  
+    var newDate_30MIN = newDate - 1800;
+    var newDate_1H = newDate - 3600;
+    var newDate_1H30MIN = newDate - 5400;
+    var newDate_2H = newDate - 7200;
+
+    var api_url = 'https://api.wheretheiss.at/v1/satellites/25544/positions?timestamps=' + newDate + ',' + newDate_30MIN + ',' + newDate_1H + ',' + newDate_1H30MIN + ',' + newDate_2H;
+
+    console.log(api_url);
+    
+    
+    function moveISS () {
+        $.getJSON(api_url, function(data) {
+            
+            //for JSON v1 use this http://api.open-notify.org/iss-now.json
+            // var lat = data['iss_position']['latitude'];
+            // var lon = data['iss_position']['longitude'];
+            
+            //for JSON v2 use this https://api.wheretheiss.at/v1/satellites/25544
+            const {latitude, longitude} = data;
+            var lat = data[0].latitude;
+            var lon = data[0].longitude;
+            
+            console.log(lat, lon);
+     
+            // for(var i in data) {
+            //   traceCoordinate.push([data[i].latitude, data[i].longitude]);
+            // }
+            // console.log(traceCoordinate); 
+
+            iss.setLatLng([lat, lon]);
+            isscirc.setLatLng([lat, lon]);
+            map.panTo([lat, lon], animate=true);
+
+
+            $('#latNew').html(Math.round(lat*1000)/1000.0);
+            $('#lonNew').html(Math.round(lon*1000)/1000.0);
+            
+        });
+        
+       
+        setTimeout(moveISS, 5000); 
+    }
+
+    L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+        maxZoom: 15, //default 4
+    }).addTo(map);
+
+    var ISSIcon = L.icon({
+        iconUrl: '/media/ISSIcon.png',
+        iconSize: [50, 30],
+        iconAnchor: [25, 15],
+        popupAnchor: [50, 25],
+        shadowUrl: '/media/ISSIcon_shadow.png',
+        shadowSize: [60, 40],
+        shadowAnchor: [30, 15]
+    });
+
+    var iss = L.marker([0, 0], {icon: ISSIcon}).addTo(map);
+    var isscirc = L.circle([0,0], 2200e3, {color: "#0B2CE1", opacity: 0.3, weight:1, fillColor: "#0B2CE1", fillOpacity: 0.1}).addTo(map).bindPopup('ISS is here!').closePopup(); 
+
+    //traceroute
+    // var polyline = L.polyline(traceCoordinate).addTo(map);
+    
+    moveISS();

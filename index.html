@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0023)https://cli.github.com/ -->
+
 <html class="html-fluid"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
   <meta charset="UTF-8">
@@ -10,10 +10,8 @@
   <link rel="icon" type="image/x-icon" href="https://github.githubassets.com/favicon.ico">
   <link href="./index_files/css" rel="stylesheet">
 
-  <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>GitHub CLI | Take GitHub to the command line</title>
 
-
+<title>Syukran Soleh Submission</title>
 
 
 <!-- 1st map Leaflet -->
@@ -74,7 +72,7 @@
       
      
 
-      <a class="mt-3 d-block f5-mktg-fluid text-gray-light Bump-link no-underline" href="https://github.com/cli/cli#installation" target="_blank">See details below <span class="Bump-link-symbol">→</span>
+      <a class="mt-3 d-block f5-mktg-fluid text-gray-light Bump-link no-underline" href="#" target="_blank">See details below <span class="Bump-link-symbol">→</span>
       </a>
 
     </div>
@@ -86,23 +84,8 @@
         <h3 class="command-header text-mono f2 text-normal text-center mb-2">
           <span class="text-blue-mktg mr-2">$</span>
           <span class="command command-1 type-animate d-none">ISS Location (NORAD ID: 25544)</span>
-          <!-- <span class="command command-2 type-animate d-none">Data 1</span> -->
-          <!-- <span class="command command-3 type-animate">gh</span>
-          <span class="command command-4 type-animate d-none">gh pr create</span>
-          <span class="command command-5 type-animate d-none">gh pr checks</span>
-          <span class="command command-6 type-animate d-none">gh release create</span>
-          <span class="command command-7 type-animate d-none">gh repo view</span>
-          <span class="command command-8 type-animate d-none">gh alias set</span> -->
         </h3>
-        <!-- <p class="command command-1 f4 text-center mb-4 d-none">See where the ISS at as of (put time here)</p> -->
-        <!-- <p class="command command-2 f4 text-center mb-4 d-none">Weather</p> -->
-        <!-- <p class="command command-3 f4 text-center mb-4">Check out pull requests locally.</p>
-        <p class="command command-4 d-none f4 text-center mb-4">Create a new pull request.</p>
-        <p class="command command-5 d-none f4 text-center mb-4">View your pull requests’ checks.</p>
-        <p class="command command-6 d-none f4 text-center mb-4">Create a new release.</p>
-        <p class="command command-7 d-none f4 text-center mb-4">View repository READMEs.</p>
-        <p class="command command-8 d-none f4 text-center mb-4">Create a shortcut for a gh command.</p> -->
-
+        
         <div class="col-12 col-lg-10 mx-auto bg-true-black rounded-2 box-shadow-default-mktg position-relative cli-window overflow-x-auto" style="height: 500px; border: 1px solid rgba(255, 255, 255, 0.1)">
           <div class="py-2 px-3 text-center">
             <div class="position-absolute left-3">
@@ -131,18 +114,12 @@
 
               <div class="command command-1 d-none"><br>
                 <!-- put your map here -->
-                <div class="pie" id="map" style="width: 100%; height: 360px;"></div>  
+                <div class="pie" id="map" style="width: 100%; height: 386px;"></div>  
                 <!-- <div class="pie2" id="map2" style="width: 100%; height: 360px;"></div>   -->
 
                 
-                
-                
               </div>
             </div>
-
-            <!-- TERMINAL TWO -->
-         
-
           </div>
         </div>
 
@@ -161,6 +138,31 @@
               <div class="d-inline-block circle bg-green mr-1" style="width: 12px; height: 12px; opacity: 1"></div>
             </div>
           </div>
+          <div class="f4-mktg-fluid  text-white-fade text-mono mt-5 ">
+            <span class="pl-5 text-white mr-1 green ">$</span>
+              <!-- content goes here -->
+              <div role="tabpanel" class="d-inline">
+                <span >ISS Trace Route [Based on last 11 recorded signal]: </span>
+                <div class="command command-1 d-none"><br>
+                
+                  <div id="mapid" class="shadow-sm" style="width: 100%; height: 386px;"></div> 
+                  
+                </div>
+              </div>
+              <!-- end -->
+          </div>
+        </div>
+
+         <!-- =====================3rd window============================ -->
+
+         <div class="my-6  col-12 col-lg-10 mx-auto bg-true-black rounded-2 box-shadow-default-mktg position-relative cli-window overflow-x-auto" style="height: 480px; border: 1px solid rgba(255, 255, 255, 0.1)">
+          <div class="py-2 px-3 text-center">
+            <div class="position-absolute left-3">
+              <div class="d-inline-block circle bg-red mr-1" style="width: 12px; height: 12px; opacity: 1"></div>
+              <div class="d-inline-block circle bg-yellow mr-1" style="width: 12px; height: 12px; opacity: 1"></div>
+              <div class="d-inline-block circle bg-green mr-1" style="width: 12px; height: 12px; opacity: 1"></div>
+            </div>
+          </div>
           <div class="f4-mktg-fluid px-5 text-white-fade text-mono mt-5">
             <span class="text-white mr-1">$</span>
               <!-- content goes here -->
@@ -170,14 +172,7 @@
                 <span class="command command-1  text-blue d-none" id="tempNew"></span><span class="text-blue">°C</span>
                 <div class="command command-1 d-none"><br>
                 
-                 
-                  <canvas id="myChart" width="400" height=auto></canvas>
-                  <!-- <strong class="text-white">Showing 4 of 4 issues in cli/cli</strong><br><br>
-                  <span><span class="d-inline-block green" style="width: 30px">#16</span> <span class="text-white">Improving interactions with protected branches</span></span><br>
-                  <span><span class="d-inline-block green" style="width: 30px">#14</span> <span class="text-white">PR commands on a detached head</span></span><br>
-                  <span><span class="d-inline-block green" style="width: 30px">#13</span> <span class="text-white">Support for GitHub Enterprise</span> (enhancement)</span><br>
-                  <span><span class="d-inline-block green" style="width: 30px">#8</span> <span class="text-white">Add an easier upgrade command</span> (bug)</span> 
-   -->
+                 <canvas id="myChart" width="400" height=auto></canvas>
                 </div>
               </div>
               <!-- end -->
@@ -194,7 +189,7 @@
               <div class="d-inline-block circle bg-green mr-1" style="width: 12px; height: 12px; opacity: 1"></div>
             </div>
           </div>
-
+          <!-- content 1 -->
           <div class="f4-mktg-fluid px-5 text-white-fade text-mono mt-5 text-center">
             <span class="text-white mr-1 green">$</span>
             <div role="tabpanel" class="d-inline">
@@ -202,14 +197,30 @@
               <!-- future update make it auto sync latest ID from API as my previous application for TWITTER API TOKEN rejected. -->
               <span id="tweet" tweetID="1465561652754063363"></span> 
             </div>
+          </div>
+
+          <!-- content 2 -->
+          <div class="f4-mktg-fluid px-5 text-white-fade text-mono mt-5 text-center">
+            <span class="text-white mr-1 green">$</span>
+            <div role="tabpanel" class="d-inline">
+              <span>Number of Hooman in Space as of today: </span><span  class="text-red" id="spacepeeps" style="font-weight:bold;">?</span> 
+              <!-- future update make it auto sync latest ID from API as my previous application for TWITTER API TOKEN rejected. -->
+              <span id="tweet" tweetID="1465561652754063363"></span> 
+            </div>
               <!-- content goes here -->
+              <div class="pl-5 mx-2 mb-4">   
+                <span id="astronames"> </span>
+              </div>
 
 
               <!-- content end here -->
           </div>
+
         </div>
 
        <!-- ============================================================ -->
+
+
 
 
         <!-- /Terminal -->
@@ -311,7 +322,7 @@
       </ul>
 
       <ul class="list-style-none d-flex text-gray">
-        <li class="mr-3">© 2021 syukranDev, Indiv.</li>
+        <li class="mr-3">© 2021 syukranDev</li>
         <li class="mr-3"><a href="#" class="link-gray">Soon </a></li>
         <li><a href="#" class="link-gray">Soon</a></li>
       </ul>
@@ -322,6 +333,8 @@
 
   <script src="./index_files/dist.js.download"></script>
   <script src="currentLocationISS.js"></script>
+  <script src="traceMap.js"></script>
+  <script src="peopleSpace.js"></script>
   <script sync src="https://platform.twitter.com/widgets.js"></script>
 
 

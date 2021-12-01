@@ -235,3 +235,9 @@
 }
 
 /* To hide DIV tags */
+.box{
+  /* color: #fff; */
+  /* padding: 20px; */
+  display: none;
+  margin-top: 20px;
+}
