@@ -1,0 +1,105 @@
+{
+  "Todos": [
+      {
+        "id": 1,
+        "latitude": 12.676680,
+        "longitude": 140.609372,
+        "temperature": -270.45,
+        "timestamp": 1638335471,
+        "location" : "Malaysia"
+      },
+      {
+        "id": 2,
+        "latitude": -14.502367,
+        "longitude": 128.762982,
+        "temperature": -140.45,
+        "timestamp": 1638333671,
+        "location" : "Malaysia"
+      },
+      {
+        "id": 3,
+        "latitude": -16.475290,
+        "longitude": 99.936767,
+        "temperature": -111.45,
+        "timestamp": 1638331871,
+        "location" : "Malaysia"
+      }
+      ,
+      {
+        "id": 4,
+        "latitude": 9.842530,
+        "longitude": 90.572724,
+        "temperature": -200.45,
+        "timestamp": 1638330071,
+        "location" : "Malaysia"
+      }
+      ,
+      {
+        "id": 5,
+        "latitude": 40.542347,
+        "longitude": 69.352979,
+        "temperature": -290.45,
+        "timestamp": 1638333671,
+        "location" : "Malaysia"
+      },
+      {
+        "id": 6,
+        "latitude": 46.711863,
+        "longitude": 32.864412,
+        "temperature": -111.45,
+        "timestamp": 1638331871,
+        "location" : "Malaysia"
+      },
+      {
+        "id": 7,
+        "latitude": 19.745919,
+        "longitude": 26.287074,
+        "temperature": -320.45,
+        "timestamp": 1638331871,
+        "location" : "Malaysia"
+      },
+      {
+        "id": 8,
+        "latitude": -26.635741,
+        "longitude": 11.503962,
+        "temperature": -180.45,
+        "timestamp": 1638331871,
+        "location" : "Malaysia"
+      },
+      {
+        "id": 9,
+        "latitude": -56.491655,
+        "longitude": -45.273382,
+        "temperature": -219.45,
+        "timestamp": 1638331871,
+        "location" : "Malaysia"
+        
+      },
+      {
+        "id": 10,
+        "latitude": 34.553559,
+        "longitude": -97.304631,
+        "temperature": -170.45,
+        "timestamp": 1638331871,
+        "location" : "USA"
+        
+      },
+      {
+        "id": 11,
+        "latitude": 74.195022,
+        "longitude": -48.964792,
+        "temperature": -111.45,
+        "timestamp": 1638331871,
+        "location" : "Greenland"
+      },
+      {
+        "id": 12,
+        "latitude": 75.348755,
+        "longitude": 106.953184,
+        "temperature": -221.45,
+        "timestamp": 1638331871,
+        "location" : "Russia Federation"
+      }
+    
+  ]
+}

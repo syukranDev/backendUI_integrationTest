@@ -12,19 +12,7 @@
 
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>GitHub CLI | Take GitHub to the command line</title>
-<meta name="generator" content="Jekyll v3.9.0">
-<meta property="og:title" content="GitHub CLI">
-<meta property="og:locale" content="en_US">
-<meta name="description" content="Take GitHub to the command line">
-<meta property="og:description" content="Take GitHub to the command line">
-<link rel="canonical" href="https://cli.github.com/">
-<meta property="og:url" content="https://cli.github.com/">
-<meta property="og:site_name" content="GitHub CLI">
-<meta property="og:image" content="https://cli.github.com/assets/images/social-card.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta property="twitter:image" content="https://cli.github.com/assets/images/social-card.png">
-<meta property="twitter:title" content="GitHub CLI">
-<meta name="twitter:site" content="@github">
+
 
 
 
@@ -37,8 +25,13 @@
 <!-- 2nd map -->
 <script src="http://code.jquery.com/jquery-2.0.3.min.js"> </script>
 
-<!-- where is the iss -->
-<script src="http://code.jquery.com/jquery-2.0.3.min.js"> </script>
+<!-- ChartJS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="temperatureISS.js"></script>
+
+
+
+
 
 
 
@@ -88,7 +81,7 @@
         <!-- Terminal -->
         <h3 class="command-header text-mono f2 text-normal text-center mb-2">
           <span class="text-blue-mktg mr-2">$</span>
-          <span class="command command-1 type-animate d-none">ISS Location</span>
+          <span class="command command-1 type-animate d-none">ISS Location (NORAD ID: 244)</span>
           <!-- <span class="command command-2 type-animate d-none">Data 1</span> -->
           <!-- <span class="command command-3 type-animate">gh</span>
           <span class="command command-4 type-animate d-none">gh pr create</span>
@@ -106,7 +99,7 @@
         <p class="command command-7 d-none f4 text-center mb-4">View repository READMEs.</p>
         <p class="command command-8 d-none f4 text-center mb-4">Create a shortcut for a gh command.</p> -->
 
-        <div class="col-12 col-lg-10 mx-auto bg-true-black rounded-2 box-shadow-default-mktg position-relative cli-window overflow-x-auto" style="height: 480px; border: 1px solid rgba(255, 255, 255, 0.1)">
+        <div class="col-12 col-lg-10 mx-auto bg-true-black rounded-2 box-shadow-default-mktg position-relative cli-window overflow-x-auto" style="height: 500px; border: 1px solid rgba(255, 255, 255, 0.1)">
           <div class="py-2 px-3 text-center">
             <div class="position-absolute left-3">
               <div class="d-inline-block circle bg-red mr-1" style="width: 12px; height: 12px; opacity: 1"></div>
@@ -114,8 +107,8 @@
               <div class="d-inline-block circle bg-green mr-1" style="width: 12px; height: 12px; opacity: 1"></div>
             </div>
           </div>
-          <div class="f4-mktg-fluid px-5 text-white-fade text-mono mt-5">
-            <span class="text-white mr-1">$</span>
+          <div class="f4-mktg-fluid text-white-fade text-mono mt-4 text-center">
+            <span class="pl-5 text-white mr-1 green">$</span>
 
 
             <!-- TERMINAL ONE -->
@@ -123,11 +116,27 @@
               <span >Current lattitude longitude: </span>
               <!-- <span id="update_time"></span> -->
               <span class="command command-1  text-white d-none" id="latNew"></span>° N
-              <span class="command command-1  text-white d-none" id="lonNew"></span>° E
+              <span class="command command-1  text-white d-none" id="lonNew"></span>° E <br>
+              
+              <span class="pl-5 text-white mr-1 green">$</span>
+              <span>Last 30 minute position: Unknown </span>
+              <span class="pl-5 text-white mr-1 green">$</span>
+              <span>Last 1 Hour: Unknown </span>
+              <span class="pl-5 text-white mr-1 green">$</span>
+              <span>Last 2 Hour: Unknown </span>
+
               <div class="command command-1 d-none"><br>
                 <!-- put your map here -->
                 <div id="map" style="width: 100%; height: 360px;"></div>  
+                <div id="map2" style="width: 100%; height: 360px;"></div>  
+                <div id="map3" style="width: 100%; height: 360px;"></div>  
+                <div id="map4" style="width: 100%; height: 360px;"></div>  
                 <!-- ends here -->
+                <select id="sel" onchange="toggle()">
+                  <option value="1" selected>Current</option>
+                  <option value="2">1 Hour Ago</option>
+                  <option value="3">2 Hour Ago</option>
+              </select>
                 
                 <!-- <strong class="text-white">Showing 4 of 4 issues in cli/cli</strong><br><br>
                 <span><span class="d-inline-block green" style="width: 30px">#16</span> <span class="text-white">Improving interactions with protected branches</span></span><br>
@@ -139,38 +148,10 @@
             </div>
 
             <!-- TERMINAL TWO -->
-          <div role="tabpanel" class="d-inline">
-            <span class="command command-2 type-animate text-white d-none">gh pr status</span>
-            <div class="command command-2 type-animate-done d-none"><br>
-              <span class="text-white">Relevant pull requests in cli/cli</span><br><br>
-              <strong class="text-white">Current branch</strong><br>
-              <span class="pl-3">There is no pull request associated with <span class="cyan">[fix-homepage-bug]</span></span><br>
-              <br>
-              <strong class="text-white">Created by you</strong><br>
-              <span class="pl-3">You have no open pull requests</span><br>
-              <br>
-              <strong class="text-white">Requesting a code review from you</strong><br>
-              <span class="pl-3"><span class="green">#100</span> <span class="text-white">Fix footer on homepage</span> <span class="cyan">[fix-homepage-footer]</span></span><br>
-              <span class="pl-3"><span class="green">✓ Checks passing</span> <span class="yellow">- Review pending</span>
-            </span></div>
-          </div>
+         
 
             <!-- TERMINAL 3 -->
-            <div role="tabpanel" class="d-inline">
-              <span class="command command-3 type-animate text-white">gh</span>
-              <div class="command command-3 type-animate-done d-none">
-                <span class="text-white">
-                  remote: Enumerating objects: 66, done.<br>
-                  remote: Counting objects: 100% (66/66), done.<br>
-                  remote: Total 83 (delta 66), reused 66 (delta 66), pack-reused 17<br>
-                  Unpacking objects: 100% (83/83), done.<br>
-                  From https://github.com/owner/repo<br>
-                  * [new ref] refs/pull/8896/head -&gt; patch-2<br>
-                  M README.md<br>
-                  Switched to branch 'patch-2'
-                </span>
-              </div>
-            </div>
+            
             
             <!-- TERMINAL FOUR -->
             
@@ -195,7 +176,9 @@
 
         <!-- =====================2nd window============================ -->
 
-        <div class="my-6 col-12 col-lg-10 mx-auto bg-true-black rounded-2 box-shadow-default-mktg position-relative cli-window overflow-x-auto" style="height: 480px; border: 1px solid rgba(255, 255, 255, 0.1)">
+      
+
+        <div class="my-6  col-12 col-lg-10 mx-auto bg-true-black rounded-2 box-shadow-default-mktg position-relative cli-window overflow-x-auto" style="height: 480px; border: 1px solid rgba(255, 255, 255, 0.1)">
           <div class="py-2 px-3 text-center">
             <div class="position-absolute left-3">
               <div class="d-inline-block circle bg-red mr-1" style="width: 12px; height: 12px; opacity: 1"></div>
@@ -207,19 +190,19 @@
             <span class="text-white mr-1">$</span>
               <!-- content goes here -->
               <div role="tabpanel" class="d-inline">
-                <span >Current lattitude longitude: </span>
+                <span >ISS Outisde Temperature [Every 30minutes interval] </span>
                 <!-- <span id="update_time"></span> -->
-                <span class="command command-1  text-white d-none" id="latNew"></span>° N
-                <span class="command command-1  text-white d-none" id="lonNew"></span>° E
+                <span class="command command-1  text-white d-none" id="latNew"></span>° C
                 <div class="command command-1 d-none"><br>
                 
-                  
-                  <strong class="text-white">Showing 4 of 4 issues in cli/cli</strong><br><br>
+                 
+                  <canvas id="myChart" width="400" height=auto></canvas>
+                  <!-- <strong class="text-white">Showing 4 of 4 issues in cli/cli</strong><br><br>
                   <span><span class="d-inline-block green" style="width: 30px">#16</span> <span class="text-white">Improving interactions with protected branches</span></span><br>
                   <span><span class="d-inline-block green" style="width: 30px">#14</span> <span class="text-white">PR commands on a detached head</span></span><br>
                   <span><span class="d-inline-block green" style="width: 30px">#13</span> <span class="text-white">Support for GitHub Enterprise</span> (enhancement)</span><br>
                   <span><span class="d-inline-block green" style="width: 30px">#8</span> <span class="text-white">Add an easier upgrade command</span> (bug)</span> 
-  
+   -->
                 </div>
               </div>
               <!-- end -->
@@ -228,7 +211,7 @@
 
         <!-- =====================3rd window============================ -->
 
-        <div class="my-6 col-12 col-lg-10 mx-auto bg-true-black rounded-2 box-shadow-default-mktg position-relative cli-window overflow-x-auto" style="height: 480px; border: 1px solid rgba(255, 255, 255, 0.1)">
+        <div class="my-6 col-12 col-lg-5 mx-auto bg-true-black rounded-2 box-shadow-default-mktg position-relative cli-window overflow-x-auto" style="height: auto; border: 1px solid rgba(255, 255, 255, 0.1)">
           <div class="py-2 px-3 text-center">
             <div class="position-absolute left-3">
               <div class="d-inline-block circle bg-red mr-1" style="width: 12px; height: 12px; opacity: 1"></div>
@@ -236,9 +219,49 @@
               <div class="d-inline-block circle bg-green mr-1" style="width: 12px; height: 12px; opacity: 1"></div>
             </div>
           </div>
-          <div class="f4-mktg-fluid px-5 text-white-fade text-mono mt-5">
-            <span class="text-white mr-1">$</span>
+
+          <div class="f4-mktg-fluid px-5 text-white-fade text-mono mt-5 text-center">
+            <span class="text-white mr-1 green">$</span>
+            <div role="tabpanel" class="d-inline">
+              <span>Get latest update from the Space! (@Space_Station) </span>
+              <!-- future update make it auto sync latest ID from API as my previous application for TWITTER API TOKEN rejected. -->
+              <span id="tweet" tweetID="1465561652754063363"></span> 
+            </div>
               <!-- content goes here -->
+
+
+              <style>
+                #tweet {
+                  width: 400px !important;
+                }
+              
+                #tweet iframe {
+                  border: none !important;
+                  box-shadow: none !important;
+                }
+              </style>
+
+    
+              
+              
+              <script>
+                window.onload = function () {
+                  var tweet = document.getElementById("tweet");
+                  var id = tweet.getAttribute("tweetID");
+              
+                  twttr.widgets
+                    .createTweet(id, tweet, {
+                      conversation: "none", // or all
+                      cards: "visible", // or visible
+                      linkColor: "#cc0000", // default is blue
+                      theme: "light", // or dark
+                    })
+                    .then(function (el) {
+                      el.contentDocument.querySelector(".footer").style.display = "none";
+                    });
+                };
+              </script>
+              <!-- content end here -->
           </div>
         </div>
 
@@ -249,8 +272,8 @@
       </div>
 
       <div role="tablist" class="my-6 px-1 mx-auto">
-        <button class="btn-mktg-fluid btn-white-outline-mktg-fluid text-mono m-1" type="button" role="tab" data-tab="1" tabindex="-1" aria-selected="false">ISS Location</button>
-        <button class="btn-mktg-fluid btn-white-outline-mktg-fluid text-mono m-1" type="button" role="tab" data-tab="2" tabindex="-1" aria-selected="false">Data 1</button>
+        <!-- <button class="btn-mktg-fluid btn-white-outline-mktg-fluid text-mono m-1" type="button" role="tab" data-tab="1" tabindex="" aria-selected="false">ISS Location</button>
+        <button class="btn-mktg-fluid btn-white-outline-mktg-fluid text-mono m-1" type="button" role="tab" data-tab="2" tabindex="" aria-selected="false">Data 1</button> -->
         <!-- <button class="btn-mktg-fluid btn-white-outline-mktg-fluid text-mono m-1" type="button" role="tab" data-tab="3" tabindex="-1" aria-selected="false">gh pr checkout</button>
         <button class="btn-mktg-fluid btn-white-outline-mktg-fluid text-mono m-1" type="button" role="tab" data-tab="4" tabindex="-1" aria-selected="false">gh pr create</button>
         <button class="btn-mktg-fluid btn-white-outline-mktg-fluid text-mono m-1" type="button" role="tab" data-tab="5" tabindex="-1" aria-selected="false">gh pr checks</button>
@@ -272,7 +295,7 @@
 
     <div class="container-xl mx-auto px-3 px-md-4 pt-8 pb-4">
       <div class="d-flex flex-column gutter-spacious">
-        <h2 class="col-12 col-md-8 h2-mktg-fluid mb-6 mb-md-7" style="z-index: 1">Goodbye, context switching. Hello, terminal.</h2>
+        <h2 class="col-12 col-md-8 h2-mktg-fluid mb-6 mb-md-7" style="z-index: 1">Maybank 2021 | The NeXT Programme 2021</h2>
 
         <!-- <div class="col-12 d-flex flex-wrap gutter-spacious">
           <div class="col-12 col-md-3 mb-6 d-flex flex-column flex-items-start">
@@ -386,14 +409,18 @@
 </div> 
 
 <script src="./index_files/dist.js.download"></script>
+<script src="30minMap.js"></script>
+<script sync src="https://platform.twitter.com/widgets.js"></script>
 
-<script>
+<!-- <script>
+
+  
   
 
     //============================================================== For getLoc2=
     var map = L.map('map').setView([0,0], 2);
-    var traceCoordinate = [];
-    var newDate = new Date().getTime()/1000;
+    //var traceCoordinate = [];
+    var newDate = new Date().getTime()/1000;  
     var newDate_30MIN = newDate - 1800;
     var newDate_1H = newDate - 3600;
     var newDate_1H30MIN = newDate - 5400;
@@ -416,27 +443,24 @@
             var lat = data[0].latitude;
             var lon = data[0].longitude;
             
-            
-            for(var i in data) {
-              traceCoordinate.push([data[i].latitude, data[i].longitude]);
-            }
-
-            //newData.push([lat,lon]); to push new data into array
-            console.log(traceCoordinate);
+            console.log(lat, lon);
+     
+            // for(var i in data) {
+            //   traceCoordinate.push([data[i].latitude, data[i].longitude]);
+            // }
+            // console.log(traceCoordinate); 
 
             iss.setLatLng([lat, lon]);
             isscirc.setLatLng([lat, lon]);
             map.panTo([lat, lon], animate=true);
 
 
-    
             $('#latNew').html(Math.round(lat*1000)/1000.0);
             $('#lonNew').html(Math.round(lon*1000)/1000.0);
             
-            
-      
         });
         
+       
         setTimeout(moveISS, 5000); 
     }
 
@@ -454,28 +478,18 @@
         shadowAnchor: [30, 15]
     });
 
-    
     var iss = L.marker([0, 0], {icon: ISSIcon}).addTo(map);
-    var isscirc = L.circle([0,0], 2200e3, {color: "#c22", opacity: 0.3, weight:1, fillColor: "#c22", fillOpacity: 0.1}).addTo(map).bindPopup('ISS is here!').openPopup(); 
+    var isscirc = L.circle([0,0], 2200e3, {color: "#0B2CE1", opacity: 0.3, weight:1, fillColor: "#0B2CE1", fillOpacity: 0.1}).addTo(map).bindPopup('ISS is here!').closePopup(); 
 
     //traceroute
-    var polyline = L.polyline(traceCoordinate).addTo(map);
+    // var polyline = L.polyline(traceCoordinate).addTo(map);
     
     moveISS();
 
 
-    var newDate = new Date().getTime()/1000;
-    var newDate_1H = newDate - 3600;
-    var newDate_2H = newDate - 7200;
-
-    // console.log(newDate);
-    // console.log(newDate_1H);
-    // console.log(newDate_2H);
-
-    
-  
 </script>
-
+  -->
   
 
-</body></html>
+</body>
+</html>
