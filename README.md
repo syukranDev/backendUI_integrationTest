@@ -1,14 +1,14 @@
 # iv2021-assessment
 
-**Front-end **= Js, HTML, CSS, Bootstrap, chartJS, leafletJs <br /> 
-**Back end **= nodeJS (fakeAPI) <br /> 
+**Front-end** = Js, HTML, CSS, Bootstrap, chartJS, leafletJs <br /> 
+**Back end** = nodeJS (fakeAPI) <br /> 
 
 
 # To install
 
 **For front-end:** <br /> 
 [1] Go to your local server directory (httpdocs dir for XAMPP) <br /> 
-[2] Open terminal/git bash and type `git clone <repo link>` <br /> 
+[2] Open terminal/git bash and type `git clone https://github.com/syukranDev/iv2021_syukran.git` <br /> 
 [2] Fire up your local server. <br /> 
 
 **For back-end:* <br /> 
@@ -21,4 +21,6 @@
 
 <!-- ![1](https://user-images.githubusercontent.com/51852197/88816718-44360000-d1ef-11ea-933d-1b5e2ba762ae.PNG) -->
 <!-- update this later, check again -->
+
+
 
