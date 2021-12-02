@@ -1,4 +1,4 @@
-# iv2021-assessment
+# iv2021-M*yb*nk Assessment
 **Language** = HTML, CSS, Javascript (jQuery & AJAX) <br />
 **Front-end** = Bootstrap, chartJS, leafletJs <br /> 
 **Back end/API** = nodeJS (npm package called `json-server` as fake API) & real-time API`https://api.wheretheiss.at/` <br /> 
