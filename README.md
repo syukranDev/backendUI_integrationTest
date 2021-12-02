@@ -31,7 +31,7 @@
 ![webpage full](https://user-images.githubusercontent.com/51852197/144365761-77372233-c657-4fe5-9b20-6651a8c09178.png)
 
 ## Remarks & Future Dev
--**not really meet the main task objective due to time constraint & limited knowledge on DOM manipulation, but i think meet the Extension A,B,C.** <br />
+-not really meet the main task objective due to time constraint & limited knowledge but i think meet the Extension A,B,C. <br />
 -`json-server` is a full fake REST API used for quick backend prototyping,  more infos here: https://www.npmjs.com/package/json-server <br />
 -`db.json` of fakeAPI (json-server) only contain 11 sets of self-generate data (lattitude,longitude,temperature,country,id,timestamp) due to simplicity testing, so there is no new data being updated into the `db.json`. <br />
 ![js pic](https://user-images.githubusercontent.com/51852197/144367245-cad431bb-6ad2-4091-8462-34f8130a9eb7.PNG) <br />
