@@ -24,8 +24,6 @@
 
 # Web Apps Explanation
 -**terminal tab 1 & 2 & 3 ==>** used self-generate data inside the `db.json`, all data shown in `db.json` is fetched (METHOD: GET) by jQuery/AJAX from `api-url: http://localhost:3000/Todos` of json-server. <br />
-![js pic](https://user-images.githubusercontent.com/51852197/144367245-cad431bb-6ad2-4091-8462-34f8130a9eb7.PNG)
-
 -**terminal tab 4 (twiter) ==>** tweet ID is fetched manually by simply going to tweet url (https://twitter.com/username/status/tweetID). Planned to get new Twitter API token key to query (GET) the tweet ID, but application rejected. <br />
 -**terminal tab 4 (how-many-people-in-space) ==>** data is fetch (GET) directly from `https://api.wheretheiss.at/` <br /> 
 
@@ -36,7 +34,8 @@
 # Remarks & Future Dev
 -`json-server` is a full fake REST API used for quick backend prototyping,  more infos here: https://www.npmjs.com/package/json-server <br />
 -`db.json` of fakeAPI (json-server) only contain 11 sets of self-generate data (lattitude,longitude,temperature,country,id,timestamp) due to simplicity and most opensource api doesnt provides all these in one shot.  <br />
--not really meet the main task objective due to time constraint & limited knowledge on DOM manipulation, but i think meet the Extension A,B,C.
+![js pic](https://user-images.githubusercontent.com/51852197/144367245-cad431bb-6ad2-4091-8462-34f8130a9eb7.PNG)
+-**not really meet the main task objective due to time constraint & limited knowledge on DOM manipulation, but i think meet the Extension A,B,C.**
 
 
 
