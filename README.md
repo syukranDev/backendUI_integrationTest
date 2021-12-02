@@ -19,9 +19,12 @@
 
 
 ## Web Apps Homepage Explanation
--**Terminal tab 1 & 2 & 3 ==>** used self-generate data inside the `db.json`, all data shown in `db.json` is fetched (METHOD: GET) by jQuery/AJAX from `api-url: http://localhost:3000/Todos` of json-server. <br />
--**Terminal tab 4 (twiter) ==>** tweet ID is fetched manually by simply going to tweet url (https://twitter.com/username/status/tweetID). Planned to get new Twitter API token key to query (GET) the tweet ID, but application rejected. <br />
--**Terminal tab 4 (how-many-people-in-space) ==>** data is fetch (GET) directly from `https://api.wheretheiss.at/` <br /> 
+**Terminal tab 1 & 2 & 3** 
+> used self-generate data inside the `db.json`, all data shown in `db.json` is fetched (METHOD: GET) by jQuery/AJAX from `api-url: http://localhost:3000/Todos` of json-server. <br />
+**Terminal tab 4 (Embedded Tweet)** 
+> Tweet ID is fetched manually by simply going to tweet url (https://twitter.com/username/status/tweetID). Planned to get new Twitter API token key to query (GET) the tweet ID, but application rejected. <br />
+**Terminal tab 4 (how-many-people-in-space)** 
+> Data is fetched (method: GET) directly from `https://api.wheretheiss.at/` <br /> 
 
 
 ![webpage full](https://user-images.githubusercontent.com/51852197/144365761-77372233-c657-4fe5-9b20-6651a8c09178.png)
