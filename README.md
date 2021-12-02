@@ -1,7 +1,7 @@
 # iv2021-M*yb*nk Assessment
 - **Language** = HTML5, CSS, Javascript (jQuery & AJAX) <br />
 - **Front-end** = Bootstrap, chartJS, leafletJs <br /> 
-- **Back end/API** = nodeJS (npm package called `json-server` as fake API) & real-time API`https://api.wheretheiss.at/` <br /> 
+- **Back end/API** = nodeJS (npm package called `json-server` as fake API) & number-of-people-inspace API `https://api.wheretheiss.at/` <br /> 
 
 ## Installation Guide
 **For front-end:** <br /> 
@@ -34,7 +34,7 @@
 ![webpage full](https://user-images.githubusercontent.com/51852197/144421024-c483d602-7249-4ef6-9b97-f4659d59397f.png)
 
 ## Remarks & Future Dev
-- not really meet the main task objective due to time constraint & limited knowledge but i think meet the Extension A,B,C. <br />
+- not really meet the main task objective due to time constraint but i think meet the Extension A,B,C. <br />
 - `json-server` is a full fake REST API used for quick backend prototyping,  more infos here: https://www.npmjs.com/package/json-server <br />
 - **IMPORTANT: ** `db.json` of fakeAPI (json-server) only contain 11 sets of self-generate data (lattitude,longitude,temperature,country,id,timestamp) due to simplicity testing, so there is no new data being updated everytime `db.json` is called. <br />
 ![js pic](https://user-images.githubusercontent.com/51852197/144367245-cad431bb-6ad2-4091-8462-34f8130a9eb7.PNG) <br />
