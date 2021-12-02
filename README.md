@@ -5,7 +5,7 @@
 
 ## Installation Guide
 **For front-end:** <br /> 
-> [1] Go to your local server directory (httpdocs dir for XAMPP) <br /> 
+> [1] Go to your local server directory (httpdocs dir for XAMPP @ i used Live Server extension in Visual Studio Code IDE) <br /> 
 > [2] Open terminal/git bash and type `git clone https://github.com/syukranDev/iv2021_syukran.git` <br /> 
 > [3] Fire up your local server. <br /> 
 
