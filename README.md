@@ -1,5 +1,5 @@
 # iv2021-assessment
-**Language** =HTML, CSS, Javascript, jQuery AJAX <br />
+**Language** = HTML, CSS, Javascript, jQuery AJAX <br />
 **Front-end** = Bootstrap, chartJS, leafletJs <br /> 
 **Back end/API** = nodeJS (fakeAPI) & `https://api.wheretheiss.at/` <br /> 
 
@@ -12,7 +12,7 @@
 
 **For back-end:** <br /> 
 **Assuming you have nodejs installed** <br /> 
-[1] Go to `iv2021_syukran/fakeAPI` and delete all except `db.json` and make a copy to desktop <br />
+[1] Go to path `iv2021_syukran/fakeAPI` and delete all files except `db.json` and make a copy of it to desktop (will use later) <br />
 [2] Open terminal in `iv2021_syukran/fakeAPI` directory and type `npm install -D json-server` <br />
 [3] Run the fakeAPI server by `json-server --watch db.json`, this if all good, your JSON server will be running at port 3000 (http://localhost:3000) <br /> 
 [4] `node_modules` , `dbjson`, `package.json`, `package-lock.json` will be generated. <br />
@@ -22,7 +22,13 @@
 <!-- update this later, check again -->
 
 
+# Web Page Explanation
+-**terminal tab 1 & 2 & 3 ==>** used self-generate data inside the `db.json`, some of data shown is fetched (GET) by jQuery AJAX from `url: http://localhost:3000/Tora` <br />
+-**terminal tab 4 (twiter) ==>** tweet ID is fetched manually by simply going to tweet url (https://twitter.com/<username>/status/<tweetID>. planned to get new Twitter API token key to query (GET) the tweet ID, but application rejected. <br />
+-**terminal tab 4 (how-many-people-in-space) ==>** data is fetch (GET) directly from `https://api.wheretheiss.at/` <br /> 
+
 # Remarks & Future Dev
--`db.json` of fakeAPI only contain 11 sets of self-generate data (lattitude,longitude,temperature,country,id,timestamp) due to simplicity and not many opensource api provides all these in one shot.  <br />
+-`json-server` is a full fake REST API used for quick backend prototyping,  more infos here: https://www.npmjs.com/package/json-server <br />
+-`db.json` of fakeAPI (json-server) only contain 11 sets of self-generate data (lattitude,longitude,temperature,country,id,timestamp) due to simplicity and not many opensource api provides all these in one shot.  <br />
 -not really meet the main task objective due to time constraint, but i think meet the Extension A,B,C.
 
