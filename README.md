@@ -30,6 +30,6 @@
 # Remarks & Future Dev
 -`json-server` is a full fake REST API used for quick backend prototyping,  more infos here: https://www.npmjs.com/package/json-server <br />
 -`db.json` of fakeAPI (json-server) only contain 11 sets of self-generate data (lattitude,longitude,temperature,country,id,timestamp) due to simplicity and most opensource api doesnt provides all these in one shot.  <br />
--not really meet the main task objective due to time constraint & limited knowledge, but i think meet the Extension A,B,C.
+-not really meet the main task objective due to time constraint & limited knowledge on DOM manipulation, but i think meet the Extension A,B,C.
 
 
