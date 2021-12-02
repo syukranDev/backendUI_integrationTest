@@ -20,7 +20,9 @@
 
 ## Web Apps Homepage Explanation
 **a) Window Tab 1 (Current ISS location) & 2 (ISS Trace Route) & 3 (Outside ISS Temperature)** <br />
-> used self-generate data inside the `db.json`, all data shown in `db.json` is fetched (METHOD: GET) by jQuery/AJAX from `api-url: http://localhost:3000/Todos` of json-server. <br />
+> `LeafletJs` framework is used to visualize world map and `chartJS` framework is used to visualize chart. <br />
+> All data shown in `db.json` is fixed (see remark below) and is fetched using jQuery/AJAX (method:GET) from `api-url: http://localhost:3000/Todos` of json-server. <br />
+
 
 **b) Window Tab 4 (Embedded Tweet)** <br />
 >Tweet ID is fetched manually by simply going to tweet url (https://twitter.com/username/status/tweetID). Planned to get new Twitter API token key to query (GET) the tweet ID, but application rejected. <br />
