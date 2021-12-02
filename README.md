@@ -19,17 +19,17 @@
 
 
 ## Web Apps Homepage Explanation
-**a) Window Tab 1 (Current ISS location) & 2 (ISS Trace Route) & 3 (Outside ISS Temperature)** <br />
-> `LeafletJs` framework is used to visualize world map and `chartJS` framework is used to visualize chart. <br />
-> All data shown in `db.json` is fixed (see remark below) and is fetched using jQuery/AJAX (method:GET) from `api-url: http://localhost:3000/Todos` of json-server. <br />
+**i) Window Tab 1 (Current ISS location) & 2 (ISS Trace Route) & 3 (Outside ISS Temperature)** <br />
+> a) `LeafletJs` framework is used to visualize world map and `chartJS` framework is used to visualize chart. <br />
+> b) All data shown in `db.json` is fixed (see remark below) and is fetched using jQuery/AJAX (method:GET) from `api-url: http://localhost:3000/Todos` of json-server. <br />
 
 
-**b) Window Tab 4 (Embedded Tweet)** <br />
->Tweet ID is fetched manually by simply going to tweet url (https://twitter.com/username/status/tweetID). Planned to get new Twitter API token key to query (GET) the tweet ID, but application rejected. <br />
+**ii) Window Tab 4 (Embedded Tweet)** <br />
+> a) Tweet ID is fetched manually by simply going to tweet url (https://twitter.com/username/status/tweetID). <br />
+> b) Planned to get new Twitter API token key to query (GET) the tweet ID, but application rejected. <br />
 
-**c) Window Tab 4 (how-many-people-in-space)**  <br />
-> Data is fetched (method: GET) directly from `https://api.wheretheiss.at/` 
-
+**iii) Window Tab 4 (how-many-people-in-space)**  <br />
+> a) Data is fetched (method: GET) directly from `https://api.wheretheiss.at/` <br />
 
 ![webpage full](https://user-images.githubusercontent.com/51852197/144365761-77372233-c657-4fe5-9b20-6651a8c09178.png)
 
