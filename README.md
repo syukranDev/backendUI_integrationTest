@@ -27,7 +27,7 @@
 -**terminal tab 4 (twiter) ==>** tweet ID is fetched manually by simply going to tweet url (https://twitter.com/username/status/tweetID). Planned to get new Twitter API token key to query (GET) the tweet ID, but application rejected. <br />
 -**terminal tab 4 (how-many-people-in-space) ==>** data is fetch (GET) directly from `https://api.wheretheiss.at/` <br /> 
 
-![FireShot Capture 001 - Syukran Soleh Submission - 127 0 0 1](https://user-images.githubusercontent.com/51852197/144365428-1a3478b0-fbdf-48a4-813e-8a5f958f7f24.png)
+![webpage full](https://user-images.githubusercontent.com/51852197/144365572-1f529ff4-dd67-49c5-9d43-36b5b5f29ff9.png)
 
 
 # Remarks & Future Dev
