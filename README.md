@@ -10,11 +10,10 @@
 > [3] Fire up your local server. <br /> 
 
 **For back-end (Assuming you have nodejs installed):** <br /> 
-> [1] Go to path `iv2021_syukran/fakeAPI` and delete all files except `db.json` and make a copy of it to desktop (will use later in step 4) <br />
+> [1] Go to path `iv2021_syukran/fakeAPI` and delete all files except `db.json` <br />
 > [2] Open terminal in `iv2021_syukran/fakeAPI` directory and type `npm install -D json-server` <br />
-> [3] `node_modules` , `package.json`, `package-lock.json` will be generated in path `iv2021_syukran/fakeAPI` <br />
-> [4] Copy the `db.json` (the one you copied earlier) into the path `iv2021_syukran/fakeAPI`. <br />
-> [5] Run the fakeAPI server by `json-server --watch db.json`, this if all good, your JSON server will be running at http://localhost:3000 (See picture below) <br /> 
+> [3] New `node_modules` , `package.json`, `package-lock.json` will be generated in path `iv2021_syukran/fakeAPI`alongside with existing `db.json` <br />
+> [4] Run the fakeAPI server by `json-server --watch db.json`, this if all good, your JSON server will be running at http://localhost:3000 and the content of `db.json` sholud like like this (See picture below) <br /> 
 >![terminal](https://user-images.githubusercontent.com/51852197/144419980-2458bd7d-2970-4589-8fcb-82c0abb27474.PNG)
 
 
