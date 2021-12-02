@@ -10,8 +10,8 @@
 > [2] Open terminal/git bash and type `git clone https://github.com/syukranDev/iv2021_syukran.git` <br /> 
 > [3] Fire up your local server. <br /> 
 
-**For back-end:** <br /> 
-**Assuming you have nodejs installed** <br /> 
+**For back-end (Assuming you have nodejs installed):** <br /> 
+ <br /> 
 > [1] Go to path `iv2021_syukran/fakeAPI` and delete all files except `db.json` and make a copy of it to desktop (will use later in step 5) <br />
 > [2] Open terminal in `iv2021_syukran/fakeAPI` directory and type `npm install -D json-server` <br />
 > [3] Run the fakeAPI server by `json-server --watch db.json`, this if all good, your JSON server will be running at port 3000 (http://localhost:3000) <br /> 
