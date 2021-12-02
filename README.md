@@ -27,9 +27,13 @@
 -**terminal tab 4 (twiter) ==>** tweet ID is fetched manually by simply going to tweet url (https://twitter.com/username/status/tweetID). Planned to get new Twitter API token key to query (GET) the tweet ID, but application rejected. <br />
 -**terminal tab 4 (how-many-people-in-space) ==>** data is fetch (GET) directly from `https://api.wheretheiss.at/` <br /> 
 
+![FireShot Capture 001 - Syukran Soleh Submission - 127 0 0 1](https://user-images.githubusercontent.com/51852197/144365428-1a3478b0-fbdf-48a4-813e-8a5f958f7f24.png)
+
+
 # Remarks & Future Dev
 -`json-server` is a full fake REST API used for quick backend prototyping,  more infos here: https://www.npmjs.com/package/json-server <br />
 -`db.json` of fakeAPI (json-server) only contain 11 sets of self-generate data (lattitude,longitude,temperature,country,id,timestamp) due to simplicity and most opensource api doesnt provides all these in one shot.  <br />
 -not really meet the main task objective due to time constraint & limited knowledge on DOM manipulation, but i think meet the Extension A,B,C.
+
 
 
