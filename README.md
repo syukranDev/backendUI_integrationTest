@@ -20,9 +20,9 @@
 
 ## Web Apps Homepage Explanation
 **Terminal tab 1 & 2 & 3** <br />
-> used self-generate data inside the `db.json`, all data shown in `db.json` is fetched (METHOD: GET) by jQuery/AJAX from `api-url: http://localhost:3000/Todos` of json-server. 
+> used self-generate data inside the `db.json`, all data shown in `db.json` is fetched (METHOD: GET) by jQuery/AJAX from `api-url: http://localhost:3000/Todos` of json-server. <br />
 **Terminal tab 4 (Embedded Tweet)** <br />
->Tweet ID is fetched manually by simply going to tweet url (https://twitter.com/username/status/tweetID). Planned to get new Twitter API token key to query (GET) the tweet ID, but application rejected. 
+>Tweet ID is fetched manually by simply going to tweet url (https://twitter.com/username/status/tweetID). Planned to get new Twitter API token key to query (GET) the tweet ID, but application rejected. <br />
 **Terminal tab 4 (how-many-people-in-space)**  <br />
 > Data is fetched (method: GET) directly from `https://api.wheretheiss.at/` 
 
