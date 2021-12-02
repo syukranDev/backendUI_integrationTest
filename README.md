@@ -1,7 +1,7 @@
 # iv2021-assessment
-**Language** = HTML, CSS, Javascript, jQuery AJAX <br />
+**Language** = HTML, CSS, Javascript (jQuery & AJAX) <br />
 **Front-end** = Bootstrap, chartJS, leafletJs <br /> 
-**Back end/API** = nodeJS (npm package called `json-server` as fake API) & `https://api.wheretheiss.at/` <br /> 
+**Back end/API** = nodeJS (npm package called `json-server` as fake API) & real-time API`https://api.wheretheiss.at/` <br /> 
 
 
 # To install
@@ -23,7 +23,7 @@
 
 
 # Web Apps Explanation
--**terminal tab 1 & 2 & 3 ==>** used self-generate data inside the `db.json`, all data shown in `db.json` is fetched (GET) by jQuery AJAX from `api-url: http://localhost:3000/Todos` (Todos is a parent name of json child content) <br />
+-**terminal tab 1 & 2 & 3 ==>** used self-generate data inside the `db.json`, all data shown in `db.json` is fetched (METHOD: GET) by jQuery/AJAX from `api-url: http://localhost:3000/Todos` (Todos is a parent name of json child content) <br />
 -**terminal tab 4 (twiter) ==>** tweet ID is fetched manually by simply going to tweet url (https://twitter.com/<username>/status/<tweetID>). Planned to get new Twitter API token key to query (GET) the tweet ID, but application rejected. <br />
 -**terminal tab 4 (how-many-people-in-space) ==>** data is fetch (GET) directly from `https://api.wheretheiss.at/` <br /> 
 
