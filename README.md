@@ -15,7 +15,9 @@
 > [3] New `node_modules` , `package.json`, `package-lock.json` will be generated in path `iv2021_syukran/fakeAPI` alongside with existing `db.json` <br />
 > [4] Run the fakeAPI server by `json-server --watch db.json`<br />
 > [5] If all running well, your JSON server will be running at http://localhost:3000 (See picture below) <br /> 
->![terminal](https://user-images.githubusercontent.com/51852197/144419980-2458bd7d-2970-4589-8fcb-82c0abb27474.PNG)
+> ![terminal](https://user-images.githubusercontent.com/51852197/144419980-2458bd7d-2970-4589-8fcb-82c0abb27474.PNG) <br .>
+> **IMPORTANT: ** `db.json` of fakeAPI (json-server) only contain 11 constant sets of self-generate data (lattitude,longitude,temperature,country,id,timestamp) due to simplicity testing, so there is no new data being updated everytime `db.json` is called and auto-refresh data fetch `setTimeot()` is disabled. <br />
+![js pic](https://user-images.githubusercontent.com/51852197/144367245-cad431bb-6ad2-4091-8462-34f8130a9eb7.PNG) <br />
 
 
 
@@ -36,8 +38,7 @@
 ## Remarks & Future Dev
 - not really meet the main task objective due to time constraint but i think meet the Extension A,B,C. <br />
 - `json-server` is a full fake REST API used for quick backend prototyping,  more infos here: https://www.npmjs.com/package/json-server <br />
-- **IMPORTANT: ** `db.json` of fakeAPI (json-server) only contain 11 sets of self-generate data (lattitude,longitude,temperature,country,id,timestamp) due to simplicity testing, so there is no new data being updated everytime `db.json` is called. <br />
-![js pic](https://user-images.githubusercontent.com/51852197/144367245-cad431bb-6ad2-4091-8462-34f8130a9eb7.PNG) <br />
+
 
 
 
