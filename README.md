@@ -15,11 +15,15 @@
 > [3] New `node_modules` , `package.json`, `package-lock.json` will be generated in path `iv2021_syukran/fakeAPI` alongside with existing `db.json` <br />
 > [4] Run the fakeAPI server by `json-server --watch db.json`<br />
 > [5] If all running well, your JSON server will be running at http://localhost:3000 (See picture below) <br /> 
-<p align="center">
+>  <p align="center">
   <img src="https://user-images.githubusercontent.com/51852197/144419980-2458bd7d-2970-4589-8fcb-82c0abb27474.PNG" />
-   </p <br />
-> **IMPORTANT: ** `db.json` of fakeAPI (json-server) only contain 11 constant sets of self-generate data (lattitude,longitude,temperature,country,id,timestamp) due to simplicity testing, so there is no new data being updated everytime `db.json` is called and auto-refresh data fetch `setTimeot()` is disabled. <br />
-![js pic](https://user-images.githubusercontent.com/51852197/144367245-cad431bb-6ad2-4091-8462-34f8130a9eb7.PNG) <br />
+  </p> <br />
+  
+> **IMPORTANT: ** Content of `db.json` only have 11 constant sets of self-generate data due to simplicity testing, so there is no new data being updated everytime `db.json` is called, however `setTimeout()` is included & commented within the Javascript files that calls the function of data fetching from API incase I want to implement the real-time data fetch in the future <br />
+  
+> <p align="center">
+  <img src="https://user-images.githubusercontent.com/51852197/144367245-cad431bb-6ad2-4091-8462-34f8130a9eb7.PNG" />
+  </p> <br /> 
 
 
 
