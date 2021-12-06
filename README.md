@@ -20,7 +20,7 @@
   </p> <br />
 
 **What is db.json & the json-server?** <br />
-> [1] `json-server` is the a npm (nodejs module) that you can use to create demo REST API services within a short span of minutes. <br />
+> [1] `json-server` is the npm (nodejs module) that you can use to create demo REST API services within a short span of minutes. <br />
 > [2] **IMPORTANT:** Content of `db.json` only have 11 constant sets of self-generate data due to simplicity testing, thus no new data being updated everytime `db.json` is called from the fake REST API server, however `setTimeout()` is included & commented within the Javascript files that calls the function of data fetching from API incase I want to implement fetch new data every few seconds in the future development, with that I need API that provides new relevant data every second. <br />
   
   <p align="center">
