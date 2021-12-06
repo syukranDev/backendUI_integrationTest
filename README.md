@@ -27,7 +27,8 @@
   <img src="https://user-images.githubusercontent.com/51852197/144367245-cad431bb-6ad2-4091-8462-34f8130a9eb7.PNG" />
   </p> <br /> 
 
-## Web Apps Homepage Explanation
+## Result & Explanation
+![webpage full](https://user-images.githubusercontent.com/51852197/144421024-c483d602-7249-4ef6-9b97-f4659d59397f.png)
 **i) Window Tab 1 (Current ISS location) & 2 (ISS Trace Route) & 3 (Outside ISS Temperature)** <br />
 > a) `LeafletJs` framework is used to visualize world map and `chartJS` framework is used to visualize chart. <br />
 > b) All data shown in `db.json` is fixed (see remark below) and is fetched using jQuery/AJAX (method:GET) from `api-url: http://localhost:3000/Todos` of json-server. <br />
@@ -39,7 +40,7 @@
 **iii) Window Tab 4 (how-many-people-in-space)**  <br />
 > a) Data is fetched (method: GET) directly from `https://api.wheretheiss.at/` <br />
 
-![webpage full](https://user-images.githubusercontent.com/51852197/144421024-c483d602-7249-4ef6-9b97-f4659d59397f.png)
+
 
 ## Remarks & Future Dev
 - not really meet the main task objective due to time constraint and current work but i think meet the Extension A,B,C. <br />
