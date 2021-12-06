@@ -1,7 +1,7 @@
 # iv2021-M*yb*nk Assessment
 - **Language** = HTML5, CSS, Javascript (jQuery & AJAX) <br />
 - **Front-end** = Bootstrap, chartJS, leafletJs <br /> 
-- **Back end/API** = nodeJS (npm package called `json-server` as fake API) & number-of-people-inspace API `https://api.wheretheiss.at/` <br /> 
+- **Back end/API** = nodeJS (npm package called `json-server` as fake REST API server) & number-of-people-inspace API `https://api.wheretheiss.at/` <br /> 
 
 ## Installation Guide
 **For front-end:** <br /> 
@@ -13,19 +13,19 @@
 > [1] Go to path `iv2021_syukran/fakeAPI` and delete all files except `db.json` <br />
 > [2] Open terminal in `iv2021_syukran/fakeAPI` directory and type `npm install -D json-server` <br />
 > [3] New `node_modules` , `package.json`, `package-lock.json` will be generated in path `iv2021_syukran/fakeAPI` alongside with existing `db.json` <br />
-> [4] Run the fakeAPI server by `json-server --watch db.json`<br />
+> [4] Run the fake REST API server by `json-server --watch db.json`<br />
 > [5] If all running well, your JSON server will be running at http://localhost:3000 (See picture below) <br /> 
  <p align="center">
   <img src="https://user-images.githubusercontent.com/51852197/144419980-2458bd7d-2970-4589-8fcb-82c0abb27474.PNG" />
   </p> <br />
-  
-> **IMPORTANT: ** Content of `db.json` only have 11 constant sets of self-generate data due to simplicity testing, so there is no new data being updated everytime `db.json` is called, however `setTimeout()` is included & commented within the Javascript files that calls the function of data fetching from API incase I want to implement the real-time data fetch in the future <br />
+
+**What is db.json & the json-server?** 
+> `json-server` is the a npm (nodejs module) that you can use to create demo REST API services within a short span of minutes.
+> **IMPORTANT:** Content of `db.json` only have 11 constant sets of self-generate data due to simplicity testing, thus no new data being updated everytime `db.json` is called from the fake REST API server, however `setTimeout()` is included & commented within the Javascript files that calls the function of data fetching from API incase I want to implement fetch new data every few seconds in the future development, with that I need API that provides new relevant data every second. <br />
   
   <p align="center">
   <img src="https://user-images.githubusercontent.com/51852197/144367245-cad431bb-6ad2-4091-8462-34f8130a9eb7.PNG" />
   </p> <br /> 
-
-
 
 ## Web Apps Homepage Explanation
 **i) Window Tab 1 (Current ISS location) & 2 (ISS Trace Route) & 3 (Outside ISS Temperature)** <br />
@@ -42,7 +42,7 @@
 ![webpage full](https://user-images.githubusercontent.com/51852197/144421024-c483d602-7249-4ef6-9b97-f4659d59397f.png)
 
 ## Remarks & Future Dev
-- not really meet the main task objective due to time constraint but i think meet the Extension A,B,C. <br />
+- not really meet the main task objective due to time constraint and current work but i think meet the Extension A,B,C. <br />
 - `json-server` is a full fake REST API used for quick backend prototyping,  more infos here: https://www.npmjs.com/package/json-server <br />
 
 
