@@ -1,4 +1,4 @@
-# iv2021-M*yb*nk Assessment
+# iv2021 Assessment
 - **Language** = HTML5, CSS, Javascript (jQuery & AJAX) <br />
 - **Front-end** = Bootstrap, chartJS, leafletJs <br /> 
 - **Back end/API** = nodeJS (npm package called `json-server` as fake REST API server) & number-of-people-inspace API `https://api.wheretheiss.at/` <br /> 
