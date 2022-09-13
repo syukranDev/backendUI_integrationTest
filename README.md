@@ -43,7 +43,6 @@
 
 
 ## Remarks & Future Dev
-- partially meet the main task objective due to time constraint/current work however executed the Extension A,B,C successfully. <br />
 - `json-server` is a full fake REST API used for quick backend prototyping,  more infos here: https://www.npmjs.com/package/json-server <br />
 
 
